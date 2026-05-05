@@ -209,7 +209,8 @@ figcaption {
   font-size: $fs-caption;
   color: $muted;
   text-align: left;
-  margin-top: $sp-xl;
+  margin-top: $sp-md;
+  margin-bottom: $sp-md;
   font-style: normal;
   line-height: $lh-body;
 }
