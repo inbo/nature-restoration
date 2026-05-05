@@ -16,7 +16,7 @@ main:
     children:
       - title: Wetlands
         url: /landscape/wetlands/
-      - title: Waterscapes
-        url: /landscape/waterscapes/
+      - title: Rivers and lakes
+        url: /landscape/rivers-lakes/
   - title: Key terms
     url: /keyterms/
