@@ -4,10 +4,9 @@
     {% include figure.html src="/assets/images/figure1_wetland.png" caption="Figure 1: ..." %}
 {% endcomment %}
 
-<figure class="site-figure">
+<figure>
   <img src="{{ site.baseurl }}{{ include.src }}" alt="{{ include.caption | strip_html }}" loading="lazy">
   {% if include.caption %}
   <figcaption>{{ include.caption }}</figcaption>
   {% endif %}
 </figure>
-
