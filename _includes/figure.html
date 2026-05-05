@@ -1,0 +1,12 @@
+{% comment %}
+  _includes/figure.html
+  Usage:
+    {% include figure.html src="/assets/images/figure1.png" caption="Figure 1: ..." %}
+{% endcomment %}
+
+<figure class="site-figure">
+  <img src="{{ include.src }}" alt="{{ include.caption | strip_html }}" loading="lazy">
+  {% if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
