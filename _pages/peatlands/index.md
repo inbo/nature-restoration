@@ -37,6 +37,17 @@ Peatlands may appear quiet and unassuming, yet they hold immense power in shapin
 
   <div class="card">
     <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/backgrounds/restoration_funding.jpg' | relative_url }}" alt="Restoration funding">
+      <span class="card-attribution">© Towfiqu barbhuiya</span>
+    </div>
+    <h3 class="card-title">Restoration funding</h3>
+    <p class="card-excerpt">Funding options for peatland restoration.</p>
+    <a href="{{ '/peatlands/funding-restoration/' | relative_url }}" class="btn">Learn more</a>
+  </div>
+
+
+  <div class="card">
+    <div class="card-image-wrapper">
       <img class="card-image" src="{{ '/assets/backgrounds/Buitengoor1.jpg' | relative_url }}" alt="Buitengoor, Belgium">
       <span class="card-attribution">© Yves Adams, Vilda</span>
     </div>
