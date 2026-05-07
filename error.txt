@@ -1,0 +1,118 @@
+﻿bundle : C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib
+/bundler/rubygems_ext.rb:222: warning: already initialized constan
+t Gem::Platform::JAVA
+At line:1 char:1
++ bundle exec jekyll build --trace 2>&1 | Out-File -FilePath error
+.txt  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:/Ruby34-x64/l...:P 
+   latform::JAVA:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:279: w
+arning: previous definition of JAVA was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:223: warning: already initialized constant Gem::Pl
+atform::MSWIN
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:280: w
+arning: previous definition of MSWIN was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:224: warning: already initialized constant Gem::Pl
+atform::MSWIN64
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:281: w
+arning: previous definition of MSWIN64 was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:225: warning: already initialized constant Gem::Pl
+atform::MINGW
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:282: w
+arning: previous definition of MINGW was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:226: warning: already initialized constant Gem::Pl
+atform::X64_MINGW
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:284: w
+arning: previous definition of X64_MINGW was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:228: warning: already initialized constant Gem::Pl
+atform::WINDOWS
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:286: w
+arning: previous definition of WINDOWS was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:229: warning: already initialized constant Gem::Pl
+atform::X64_LINUX
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:287: w
+arning: previous definition of X64_LINUX was here
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.5.11/lib/bundler/
+rubygems_ext.rb:230: warning: already initialized constant Gem::Pl
+atform::X64_LINUX_MUSL
+C:/Ruby34-x64/lib/ruby/site_ruby/3.4.0/rubygems/platform.rb:288: w
+arning: previous definition of X64_LINUX_MUSL was here
+C:/Ruby34-x64/lib/ruby/3.4.0/win32/registry.rb:2: warning: fiddle/
+import is found in fiddle, which will no longer be part of the def
+ault gems starting from Ruby 4.0.0.
+You can add fiddle to your Gemfile or gemspec to silence this warn
+ing.
+Configuration file: C:/Users/maud_raman/Documents/GitHub/nature-restoration/_config.yml
+            Source: C:/Users/maud_raman/Documents/GitHub/nature-restoration
+       Destination: C:/Users/maud_raman/Documents/GitHub/nature-restoration/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+DEPRECATION WARNING [import]: Sass @import rules are deprecated an
+d will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ÔòÀ
+1 Ôöé @import "variables";
+  Ôöé         ^^^^^^^^^^^
+  ÔòÁ
+    C:\Users\maud_raman\Documents\GitHub\nature-restoration\assets
+\theme\css\styles.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated an
+d will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ÔòÀ
+2 Ôöé @import "navbar";
+  Ôöé         ^^^^^^^^
+  ÔòÁ
+    C:\Users\maud_raman\Documents\GitHub\nature-restoration\assets
+\theme\css\styles.scss 2:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated an
+d will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ÔòÀ
+3 Ôöé @import "hero";
+  Ôöé         ^^^^^^
+  ÔòÁ
+    C:\Users\maud_raman\Documents\GitHub\nature-restoration\assets
+\theme\css\styles.scss 3:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated an
+d will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ÔòÀ
+4 Ôöé @import "content";
+  Ôöé         ^^^^^^^^^
+  ÔòÁ
+    C:\Users\maud_raman\Documents\GitHub\nature-restoration\assets
+\theme\css\styles.scss 4:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated an
+d will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ÔòÀ
+5 Ôöé @import "toc";
+  Ôöé         ^^^^^
+  ÔòÁ
+    C:\Users\maud_raman\Documents\GitHub\nature-restoration\assets
+\theme\css\styles.scss 5:9  root stylesheet
+WARNING: 1 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+                    done in 0.659 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
