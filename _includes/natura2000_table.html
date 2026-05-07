@@ -1,0 +1,71 @@
+{% comment %}
+  _includes/natura2000_table.html
+  Renders the Natura 2000 habitat codes table from _data/natura2000_codes.csv
+
+  USAGE in any .md page:
+    {% include natura2000_table.html %}
+
+  CSV columns (semicolon-separated):
+    group       – habitat group label
+    code        – habitat code number (without asterisk)
+    priority    – true/false
+    name        – habitat name
+    description – short description shown in hover popup
+    link        – URL to EUNIS factsheet
+{% endcomment %}
+
+{% assign rows   = site.data.natura2000_codes %}
+{% assign groups = "" | split: "" %}
+{% for row in rows %}
+  {% unless groups contains row.group %}
+    {% assign groups = groups | push: row.group %}
+  {% endunless %}
+{% endfor %}
+
+<div class="site-table-wrap">
+  <table class="site-table" role="table">
+    <thead>
+      <tr>
+        <th scope="col">Habitat group</th>
+        <th scope="col">Habitats</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for group in groups %}
+        {% assign group_rows = rows | where: "group", group %}
+        {% assign row_count  = group_rows | size %}
+
+        {% for row in group_rows %}
+          <tr{% if forloop.first %} class="group-row"{% endif %}>
+
+            {% if forloop.first %}
+              <td class="group-label" rowspan="{{ row_count }}">
+                <span class="group-badge">{{ group }}</span>
+              </td>
+            {% endif %}
+
+            <td class="has-popup">
+              <span class="habitat-code{% if row.priority == 'true' %} priority{% endif %}">{{ row.code }}{% if row.priority == 'true' %}*{% endif %}</span>
+              <span class="habitat-name">{{ row.name }}</span>
+              <i class="info-icon" aria-hidden="true">i</i>
+              <div class="popup-card" role="tooltip">
+                <p class="popup-title">{{ row.name }}</p>
+                {% if row.description != "" and row.description != nil %}
+                <p class="popup-desc">{{ row.description }}</p>
+                {% endif %}
+                {% if row.link != "" and row.link != nil %}
+                <a class="popup-link" href="{{ row.link }}" target="_blank" rel="noopener">Read more →</a>
+                {% endif %}
+              </div>
+            </td>
+
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p class="site-table-footnote">
+    <span class="priority-star">*</span> Priority habitat type under Annex I of the EU Habitats Directive (92/43/EEC)
+  </p>
+</div>

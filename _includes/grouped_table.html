@@ -1,0 +1,99 @@
+{% comment %}
+  =====================================================================
+  _includes/grouped_table.html
+  =====================================================================
+  Renders a grouped table from a Jekyll data file.
+
+  USAGE in any .md or .html page:
+    {% include grouped_table.html
+       data     = site.data.natura2000_codes
+       col1     = "Habitat group"
+       col2     = "Habitats"
+       footnote = "Priority habitat type under Annex I of the EU Habitats Directive (92/43/EEC)"
+    %}
+
+  CSV columns:
+    group        – row group label (rows with the same group are merged)
+    content      – cell text (HTML allowed)
+    description  – (optional) short text shown in the hover popup
+    link         – (optional) URL for the "Read more" button in the popup
+
+  If description or link are empty for a row, no popup is shown for that row.
+
+  To add a new table:
+    1. Drop a CSV into _data/  (e.g. _data/my_table.csv)
+    2. Call this include with data=site.data.my_table
+  =====================================================================
+{% endcomment %}
+
+{% assign rows       = include.data %}
+{% assign col1_label = include.col1     | default: "Group" %}
+{% assign col2_label = include.col2     | default: "Items" %}
+{% assign footnote   = include.footnote %}
+
+{% comment %} Build ordered list of unique groups {% endcomment %}
+{% assign groups = "" | split: "" %}
+{% for row in rows %}
+  {% unless groups contains row.group %}
+    {% assign groups = groups | push: row.group %}
+  {% endunless %}
+{% endfor %}
+
+<div class="site-table-wrap">
+  <table class="site-table" role="table">
+    <thead>
+      <tr>
+        <th scope="col">{{ col1_label }}</th>
+        <th scope="col">{{ col2_label }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for group in groups %}
+        {% assign group_rows = rows | where: "group", group %}
+        {% assign row_count  = group_rows | size %}
+
+        {% for row in group_rows %}
+          {% assign is_first = forloop.first %}
+          {% assign has_popup = false %}
+          {% if row.description != "" and row.description != nil %}{% assign has_popup = true %}{% endif %}
+          {% if row.link != "" and row.link != nil %}{% assign has_popup = true %}{% endif %}
+
+          <tr{% if is_first %} class="group-row"{% endif %}>
+
+            {% if is_first %}
+              <td class="group-label" rowspan="{{ row_count }}">
+                <span class="group-badge">{{ group }}</span>
+              </td>
+            {% endif %}
+
+            {% if has_popup %}
+            <td class="has-popup">
+              <span>{{ row.content }}</span>
+              <i class="info-icon" aria-hidden="true">i</i>
+              <div class="popup-card" role="tooltip">
+                <p class="popup-title">{{ row.content | strip_html }}</p>
+                {% if row.description != "" and row.description != nil %}
+                <p class="popup-desc">{{ row.description }}</p>
+                {% endif %}
+                {% if row.link != "" and row.link != nil %}
+                <a class="popup-link" href="{{ row.link }}" target="_blank" rel="noopener">Read more →</a>
+                {% endif %}
+              </div>
+            </td>
+            {% else %}
+            <td>{{ row.content }}</td>
+            {% endif %}
+
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if footnote %}
+  <p class="site-table-footnote">
+    <span class="priority-star">*</span> {{ footnote }}
+  </p>
+  {% endif %}
+</div>
+

@@ -112,7 +112,7 @@ Peatlands are legally protected under the European Union's Natura 2000 network, 
 
 The mire-related open landscapes are divided into three sub-groups under the Habitats Directive:
 
-<!-- table -->
+{% include natura2000_table.html %}
 
 Seven of these habitat types are Priority Habitats under Annex I of the Habitats Directive (indicated with an asterisk). For all these habitat types, a clear definition is provided, but member states can have different interpretations that even differ regionally. Habitat type 7140 for instance, has 3 subdivisions in Belgium, related to acidity, nutrient status and mineral composition (7140_oli, 7140_meso, 7140_base). In Germany, federal states use different indicator species for 7140, varying from 7 to 141 plant species.
 
