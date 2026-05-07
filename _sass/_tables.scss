@@ -222,25 +222,9 @@
   }
 }
 
-// ── Responsive ───────────────────────────────────────────────────────────────
-@media (max-width: 600px) {
-  .site-table {
-    font-size: 0.875rem;
-
-    .group-label {
-      width: 28%;
-      min-width: 110px;
-      padding: 0.75rem 0.6rem;
-    }
-
-    .group-badge { font-size: 0.75rem; }
-
-    thead th,
-    td { padding: 0.6rem 0.75rem; }
-  }
-}
-
 // ── Natura 2000 habitat code pills ───────────────────────────────────────────
+// Specific to natura2000_table.html — not part of the generic table component
+
 .habitat-code {
   display: inline-block;
   margin-right: 0.55rem;
@@ -270,4 +254,89 @@
     font-style: italic;
     color: #4a4a4a;
   }
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 600px) {
+  .site-table {
+    font-size: 0.875rem;
+
+    .group-label {
+      width: 28%;
+      min-width: 110px;
+      padding: 0.75rem 0.6rem;
+    }
+
+    .group-badge { font-size: 0.75rem; }
+
+    thead th,
+    td { padding: 0.6rem 0.75rem; }
+  }
+}
+
+// ── Markdown tables ───────────────────────────────────────────────────────────
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(30, 77, 43, 0.10);
+  margin: 2rem 0 2rem;
+
+  thead tr { background: #1e4d2b; }
+
+  thead th {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #c8dece;
+    transition: background 0.15s ease;
+
+    &:last-child { border-bottom: none; }
+    &:hover td  { background: #dff0e5; }
+  }
+
+  td {
+    padding: 0.65rem 1.25rem;
+    vertical-align: middle;
+    border-right: 1px solid #c8dece;
+
+    &:last-child { border-right: none; }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.875rem;
+
+    thead th,
+    td { padding: 0.6rem 0.75rem; }
+  }
+}
+
+// First column — sage green, outside the block above
+.page-content table:not([class]) td:first-child {
+  background: linear-gradient(160deg, #CCE3DE 0%, #A4C3B2 100%);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1e4d2b;
+  border-right: 3px solid #7aaa94;
+  text-align: center;
+  width: 20%;
+}
+
+.page-content table:not([class]) tbody tr:hover td:first-child {
+  background: linear-gradient(160deg, #CCE3DE 0%, #A4C3B2 100%);
 }
