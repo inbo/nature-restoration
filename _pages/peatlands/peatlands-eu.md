@@ -62,7 +62,7 @@ Mires and peatlands can be classified using a combination of hydrological and ch
 
 ## 1.2 Why peatland restoration?
 
-Peatland restoration is the assisted recovery of a degraded, damaged, or destroyed peatland ecosystem. It aims to return peatland structure, species composition and ecological processes to a naturally functioning, self-sustaining state. Peatland restoration is important for three key reasons: stabilizing the climate, conserving biodiversity, and supporting a wide range of ecosystem services. To prevent further peat decomposition, soil subsidence and CO2 emissions from peatlands, peatland restoration always requires full rewetting by raising the water level to near the surface (GMC & WI 2022). 
+Peatland restoration is the assisted recovery of a degraded, damaged, or destroyed peatland ecosystem. It aims to return peatland structure, species composition and ecological processes to a naturally functioning, self-sustaining state. Peatland restoration is important for three key reasons: stabilizing the climate, conserving biodiversity, and supporting a wide range of ecosystem services. To prevent further peat decomposition, soil subsidence and CO2 emissions from peatlands, peatland restoration always requires full rewetting by raising the water level to near the surface. 
 
 ### Climate stabilisation
 
