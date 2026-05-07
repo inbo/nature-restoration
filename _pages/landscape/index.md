@@ -27,7 +27,7 @@ Beyond the surface of fields, forests, and valleys lies a complex, living infras
   
   <div class="card">
     <div class="card-image-wrapper">
-      <img class="card-image" src="{{ '/assets/backgrounds/Langemeersen.jpg' | relative_url }}" alt="De Teut, Belgium">
+      <img class="card-image" src="{{ '/assets/backgrounds/OudeDurme.jpg' | relative_url }}" alt="De Teut, Belgium">
       <span class="card-attribution">© Yves Adams, Vilda</span>
     </div>
     <h3 class="card-title">Rivers and lakes</h3>

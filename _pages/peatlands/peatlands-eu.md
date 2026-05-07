@@ -24,7 +24,7 @@ Three attributes define a wetland and determine which type it is: its hydrology 
 
 Peatlands are wetland ecosystems where soils are dominated by peat. In peatlands, net primary production exceeds organic matter decomposition as a result of waterlogged conditions, which leads to the accumulation of peat.
 
-Peatland conservation is widely recognised internationally as an important nature-based strategy for climate change mitigation. However, there is still no universally agreed definition of "peat", which creates challenges for estimating and comparing global peat carbon storage.
+Peatland conservation is widely recognised internationally as an important nature-based strategy for climate change mitigation. However, there is still no universally agreed definition of "{% include tooltip.html term="peat" definition="Soft, porous or compressed, sedimentary deposit of plant origin with high water content in the natural state (up to about 90%). Countries may define peat according to their national circumstances." %}", which creates challenges for estimating and comparing global peat carbon storage.
 
 As this website is built for restoration and conservation purposes, Lourenco et al. (2023) proposes — in accordance with the recommendations from the IPCC working groups and FAO — that a peatland can be defined as an area containing peat soil having at least 5% organic carbon through a depth of at least 0.1 m. At the time of identification, the peatland can be with or without vegetation and be either waterlogged or not waterlogged.
 

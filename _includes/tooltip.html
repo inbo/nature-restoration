@@ -1,0 +1,12 @@
+{% comment %}
+  _includes/tooltip.html
+  Renders an inline term with a hover popup showing the definition.
+
+  USAGE:
+    {% include tooltip.html term="Peat" definition="Soft, porous or compressed..." %}
+{% endcomment %}
+
+<span class="tooltip-wrap">
+  <span class="tooltip-term">{{ include.term }}</span>
+  <span class="tooltip-popup">{{ include.definition }}</span>
+</span>
