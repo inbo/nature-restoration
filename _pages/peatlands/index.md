@@ -1,7 +1,7 @@
 ---
 layout: base
 title: "Peatlands"
-hero_image: /assets/backgrounds/moss.jpg
+hero_image: /assets/backgrounds/veenmosbedje.jpg
 hero_overlay: true   # omit for photo only
 permalink: /peatlands/
 toc: false
