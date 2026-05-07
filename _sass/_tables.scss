@@ -366,3 +366,105 @@
     display: block;
   }
 }
+
+// ── Glossary table ────────────────────────────────────────────────────────────
+// Used via: {% include glossary_table.html %}
+
+.glossary-wrap {
+  margin: 2rem 0 1.5rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(30, 77, 43, 0.10);
+}
+
+.glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #fff;
+
+  // ── Header ──────────────────────────────────────────────────────────────
+  thead tr { background: #1e4d2b; }
+
+  thead th {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+
+    &:first-child { border-radius: 10px 0 0 0; }
+    &:last-child  { border-radius: 0 10px 0 0; }
+  }
+
+  // ── Letter header rows ───────────────────────────────────────────────────
+  .glossary-letter-row td {
+    background: #A4C3B2;
+    color: #1e4d2b;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.4rem 1.25rem;
+    border-bottom: 2px solid #7aaa94;
+    letter-spacing: 0.05em;
+  }
+
+  // ── Alternating rows ─────────────────────────────────────────────────────
+  .glossary-row-odd  td { background: #fff; }
+  .glossary-row-even td { background: #EAF4F4; }
+
+  tbody tr:not(.glossary-letter-row) {
+    border-bottom: 1px solid #c8dece;
+    transition: background 0.15s ease;
+
+    &:hover td { background: #dff0e5; }
+  }
+
+  // ── Cells ────────────────────────────────────────────────────────────────
+  td {
+    padding: 0.65rem 1.25rem;
+    vertical-align: top;
+    border-right: 1px solid #c8dece;
+
+    &:last-child { border-right: none; }
+  }
+
+  .glossary-term {
+    font-weight: 600;
+    color: #1e4d2b;
+    width: 20%;
+    min-width: 140px;
+    vertical-align: middle;
+  }
+
+  .glossary-definition {
+    width: 55%;
+  }
+
+  .glossary-source {
+    width: 25%;
+    font-size: 0.85rem;
+    color: #4a4a4a;
+    font-style: italic;
+  }
+
+  // ── Last row corners ─────────────────────────────────────────────────────
+  tbody tr:last-child {
+    td:first-child { border-radius: 0 0 0 10px; }
+    td:last-child  { border-radius: 0 0 10px 0; }
+  }
+
+  // ── Responsive ───────────────────────────────────────────────────────────
+  @media (max-width: 600px) {
+    font-size: 0.875rem;
+
+    thead th,
+    td { padding: 0.6rem 0.75rem; }
+
+    .glossary-source { display: none; }
+  }
+}

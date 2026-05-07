@@ -1,0 +1,49 @@
+{% comment %}
+  _includes/glossary_table.html
+  Renders the full key terms glossary from _data/keyterms.csv
+
+  USAGE:
+    {% include glossary_table.html %}
+
+  CSV columns:
+    letter      – alphabet letter grouping
+    term        – the term
+    definition  – definition text
+    source      – source of definition
+{% endcomment %}
+
+{% assign rows   = site.data.keyterms %}
+{% assign letters = "" | split: "" %}
+{% for row in rows %}
+  {% unless letters contains row.letter %}
+    {% assign letters = letters | push: row.letter %}
+  {% endunless %}
+{% endfor %}
+
+<div class="glossary-wrap">
+  <table class="glossary-table" role="table">
+    <thead>
+      <tr>
+        <th scope="col">Term</th>
+        <th scope="col">Definition</th>
+        <th scope="col">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for letter in letters %}
+        <tr class="glossary-letter-row">
+          <td colspan="3">{{ letter }}</td>
+        </tr>
+        {% assign letter_rows = rows | where: "letter", letter %}
+        {% assign row_count = letter_rows | size %}
+        {% for row in letter_rows %}
+          <tr class="{% cycle 'glossary-row-odd', 'glossary-row-even' %}">
+            <td class="glossary-term">{{ row.term }}</td>
+            <td class="glossary-definition">{{ row.definition }}</td>
+            <td class="glossary-source">{{ row.source }}</td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

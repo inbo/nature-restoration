@@ -6,3 +6,5 @@ hero_overlay: true   # omit for photo only
 permalink: /keyterms/
 layout: base
 ---
+
+{% include glossary_table.html %}
