@@ -2,10 +2,12 @@
 title: About
 description: Information about the context, projects and their funding 
 hero_image: /assets/backgrounds/ferns.jpg
+image_credit: "Ohaps"
 hero_overlay: true   # omit for photo only
 permalink: /about/
 layout: base
 ---
+
 ## 1. ALFAwetlands
 This website is built by ALFAwetlands.
 ALFAwetlands is funded by the European Union’s Horizon Europe research and innovation program (HORIZON-CL5-2021-D1-01).

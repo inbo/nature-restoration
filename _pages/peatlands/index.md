@@ -2,6 +2,7 @@
 layout: base
 title: "Peatlands"
 hero_image: /assets/backgrounds/veenmosbedje.jpg
+image_credit: "Yves Adams, Vilda"
 hero_overlay: true   # omit for photo only
 permalink: /peatlands/
 toc: false
