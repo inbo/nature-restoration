@@ -497,3 +497,86 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+// Styling reference list
+
+  .ref-section {
+    margin-top: 2.5rem;
+    border-top: 1px solid #CCE3DE;
+    padding-top: 1rem;
+  }
+
+  #ref-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #EAF4F4;
+    color: #6B9080;
+    border: 1px solid #A4C3B2;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  #ref-toggle:hover {
+    background: #CCE3DE;
+    color: #4a6b5e;
+  }
+
+  .ref-chevron {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+
+  #ref-toggle[aria-expanded="true"] .ref-chevron {
+    transform: rotate(90deg);
+  }
+
+  #ref-list {
+    margin-top: 1rem;
+    background: #F6FFF8;
+    border: 1px solid #CCE3DE;
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+  }
+
+  #ref-list ol {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  #ref-list li {
+    font-size: 0.875rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  #ref-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  #ref-list a {
+    color: #6B9080;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+
+  #ref-list a:hover {
+    text-decoration: underline;
+  }
+
+  sup a.fnref {
+    color: #6B9080;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.75rem;
+  }
+
+  sup a.fnref:hover {
+    text-decoration: underline;
+  }

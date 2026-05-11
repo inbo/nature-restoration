@@ -1,0 +1,37 @@
+<div class="ref-section">
+  <button id="ref-toggle" aria-expanded="false" aria-controls="ref-list">
+    <span class="ref-chevron">&#9656;</span> References
+  </button>
+  <div id="ref-list" hidden>
+    {% include {{ include.file }} %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.getElementById('ref-toggle');
+    var list = document.getElementById('ref-list');
+
+    if (!toggle || !list) return;
+
+    toggle.addEventListener('click', function () {
+      var open = !list.hidden;
+      list.hidden = open;
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+
+    document.querySelectorAll('a.fnref').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        list.hidden = false;
+        toggle.setAttribute('aria-expanded', 'true');
+        var target = document.getElementById(link.getAttribute('href').slice(1));
+        if (target) {
+          setTimeout(function () {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        }
+      });
+    });
+  });
+</script>
