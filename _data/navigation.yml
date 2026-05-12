@@ -11,8 +11,6 @@ main:
         url: /peatlands/guidelines/
       - title: Restoration funding
         url: /peatlands/restoration-funding/
-      - title: Best Practices
-        url: /peatlands/best-practices/
   - title: Landscape perspectives
     url: /landscape/
     children:
