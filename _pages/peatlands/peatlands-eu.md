@@ -168,4 +168,4 @@ The Carbon Removal and Carbon Farming (CRCF) Regulation is an EU policy initiati
 
 In order to build an EU-wide robust, comparable, and reliable system for private sector investments into peatland restoration, a standardised EU-level certification shall facilitate sustainable carbon farming solutions without greenwashing. Peatlands are included as a viable pathway for soil emission reductions. The CRCF is intended to be an important step towards accelerating investment in peatland rewetting. The final shape of the CRCF Delegated Act will influence the scale and effectiveness of future investment in peatland rewetting in EU Member States.<sup><a class="fnref" id="ref-16b-origin" href="#fn-16">[16]</a>,<a class="fnref" id="ref-25-origin" href="#fn-25">[25]</a></sup>
 
-{% include references.html file="refs/peatlands-eu.html" %} 
+{% include references.html file="refs/refs_peatlands-eu.html" %} 
