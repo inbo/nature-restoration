@@ -53,12 +53,11 @@ The following Decision Support System (DSS) is meant for all landowners and prac
         EY --> T3
         EN --> T4
 
-        %% Doelen (Klikbaar maken kan door de '#' te vervangen door een echte URL)
-        T1["<a href='### 3.2.1 Section 1: Natura 2000 network' style='color:inherit;text-decoration:none;'>Section 1<br>Natura 2000</a>"]:::target
-        T21["<a href='### 3.2.2 Section 2.1: Nature Restoration Regulation, Art. 4' style='color:inherit;text-decoration:none;'>Section 2.1<br>NRR article 4</a>"]:::target
-        T22["<a href='### 3.2.3 Section 2.2: Nature Restoration Regulation, Art. 11' style='color:inherit;text-decoration:none;'>Section 2.2<br>NRR article 11</a>"]:::target
-        T3["<a href='### 3.2.4 Section 3: Water Framework Directive' style='color:inherit;text-decoration:none;'>Section 3<br>Water Framework Directive</a>"]:::target
-        T4["<a href='### 3.2.5 Section 4: Other Scenarios' style='color:inherit;text-decoration:none;'>Section 4<br>Other scenarios</a>"]:::target
+    T1["<a href='#321-section-1-natura-2000-network' style='color:inherit;text-decoration:none;'>Section 1<br>Natura 2000</a>"]:::target
+    T21["<a href='#322-section-21-nature-restoration-regulation-art-4' style='color:inherit;text-decoration:none;'>Section 2.1<br>NRR article 4</a>"]:::target
+    T22["<a href='#323-section-22-nature-restoration-regulation-art-11' style='color:inherit;text-decoration:none;'>Section 2.2<br>NRR article 11</a>"]:::target
+    T3["<a href='#324-section-3-water-framework-directive' style='color:inherit;text-decoration:none;'>Section 3<br>Water Framework Directive</a>"]:::target
+    T4["<a href='#325-section-4-other-scenarios' style='color:inherit;text-decoration:none;'>Section 4<br>Other scenarios</a>"]:::target
 ```
 <p class="caption"><strong>Figure 1.</strong>  Decision support flowchart for peatland restoration within the European Union.</p>
 
@@ -168,5 +167,6 @@ Certain current limitations pertain to the identification and description of rel
 
 Lastly, national funding schemes were not analysed in detail, as the Decision Support System focuses on EU-wide funding opportunities, which may limit the overall comprehensiveness of this assessment.
 
-{% include references.html file="refs/refs_funding.html" %} 
-{% include mermaid.html file="mermaid.html" %}
+{% include references.html file="refs/refs_funding.html" %}
+{% include mermaid.html %}
+
