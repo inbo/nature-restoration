@@ -10,14 +10,64 @@ permalink: /peatlands/restoration-funding/
 ## 3.1 Introduction
 The following Decision Support System (DSS) is meant for all landowners and practitioners within the European Union interested in restoring their peatland and accessing financial support for it. With the help of the following DSS, one can get information on available funding options for the restoration and rewetting of peatland sites in the European Union.
 
+```mermaid
+    graph TD
+    %%{wrap}%%
+       
+        A("Is the restoration of your peatland directly related to the achievement of EU restoration targets? (Habitat and Birds Directive, Nature Restoration Regulation, Water Framework Directive)?"):::decision
+        A --> AY{y e s}:::greenfill
+        A --> AN{no}:::redfill
+
+        AN --> T4
+        AY --> B
+
+        B("Is your peatland within the EU Natura 2000 network?"):::decision
+        B --> BY{y e s}:::greenfill
+        B --> BN{no}:::redfill
+
+        BY --> T1
+        BN --> C
+
+        C("Are you restoring your peatland site in accordance with the Nature Restoration Plan of your Member State?"):::decision
+        C --> CY{y e s}:::greenfill
+        C --> CN{no}:::redfill
+
+        CY --> D
+        CN --> E
+
+        D("Do you plan to restore your peatland site under your Member State's implementation of the NRR to help achieve Article 4 targets?"):::decision
+        D --> DY{y e s}:::greenfill
+        D --> DN{no}:::redfill
+
+        DY --> T21
+        DN --> F
+
+        F("Do you plan to restore your peatland site under your Member State's NRR implementation to help achieve Article 11 targets?"):::decision
+        F --> FY{y e s}:::greenfill
+        FY --> T22
+
+        E("Is your peatland included in your Member State's River Basin Management Plan or an equivalent national framework?"):::decision
+        E --> EY{y e s}:::greenfill
+        E --> EN{no}:::redfill
+
+        EY --> T3
+        EN --> T4
+
+        %% Doelen (Klikbaar maken kan door de '#' te vervangen door een echte URL)
+        T1["<a href='### 3.2.1 Section 1: Natura 2000 network' style='color:inherit;text-decoration:none;'>Section 1<br>Natura 2000</a>"]:::target
+        T21["<a href='### 3.2.2 Section 2.1: Nature Restoration Regulation, Art. 4' style='color:inherit;text-decoration:none;'>Section 2.1<br>NRR article 4</a>"]:::target
+        T22["<a href='### 3.2.3 Section 2.2: Nature Restoration Regulation, Art. 11' style='color:inherit;text-decoration:none;'>Section 2.2<br>NRR article 11</a>"]:::target
+        T3["<a href='### 3.2.4 Section 3: Water Framework Directive' style='color:inherit;text-decoration:none;'>Section 3<br>Water Framework Directive</a>"]:::target
+        T4["<a href='### 3.2.5 Section 4: Other Scenarios' style='color:inherit;text-decoration:none;'>Section 4<br>Other scenarios</a>"]:::target
+```
+<p class="caption"><strong>Figure 1.</strong>  Decision support flowchart for peatland restoration within the European Union.</p>
+
 ### 3.2.1 Section 1: Natura 2000 network
 The Birds Directive (Directive 2009/147/EC on the conservation of wild birds (referred to as Birds Directive 2009/147/EC); adopted 1979)<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a></sup> and the Habitats Directive (Council Directive 92/43/EEC on the conservation of natural habitats and of wild fauna and flora (referred to as Habitat Directive (92/43/EEC); adopted 1992)<sup><a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a></sup> are the oldest EU nature conservation policies, designed to protect wild birds, habitats, and species across Europe. Together, they form the Natura 2000 network, which aims to prevent habitat degradation and ensure the maintenance or restoration of favourable conservation status (FCS) for species and habitats of community interest, within which peatlands and other wetlands figure prominently (Habitat Directive (92/43/EEC), Peters & von Unger (2017)).<sup><a class="fnref" id="ref-2b-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-3-origin" href="#fn-3">[3]</a></sup>
 
 Within the Natura 2000 network, two main categories of protected sites are designated: Special Areas of Conservation (SACs) and Special Protection Areas (SPAs), respectively targeting habitat types listed in Annex I (raised bogs, fens, mires) as well as Species listed in Annex II (plant, amphibians, insects), and bird species listed in Annex I (cranes, raptors, waders) as well as migratory birds, both dependent on wetlands and peatlands Habitat Directive (92/43/EEC).<sup><a class="fnref" id="ref-2c-origin" href="#fn-2">[2]</a></sup>; Birds Directive (Directive 2009/147/EC)<sup><a class="fnref" id="ref-1b-origin" href="#fn-1">[1]</a></sup>
 
-Figure . Decision support flowchart for peatland restoration projects within Natura 2000 network. 
-
-The funding instruments listed in the righthand boxes were identified as relevant within the Natura 2000 network context. To determine whether your Member State makes use of these instruments, consult its Natura 2000 Prioritised Action Framework document, which can be found on its governmental website. 
+<p class="caption"><strong>Figure 2.</strong>  Decision support flowchart for peatland restoration projects within Natura 2000 network. The funding instruments listed in the righthand boxes were identified as relevant within the Natura 2000 network context. To determine whether your Member State makes use of these instruments, consult its Natura 2000 Prioritised Action Framework document, which can be found on its governmental website.</p>
 
 ### 3.2.2 Section 2.1: Nature Restoration Regulation, Art. 4
 The Nature Restoration Regulation (NRR)<sup><a class="fnref" id="ref-4-origin" href="#fn-4">[4]</a></sup>, adopted in 2024, aims at expanding the scope of restoration measures beyond Natura 2000 sites. The NRR sets legally binding targets that include all habitat types listed in Annex I of the Habitat Directive in poor or bad condition, from urban to marine or terrestrial ecosystems.
@@ -30,8 +80,8 @@ Article 4 of the Nature Restoration Regulation mandates that:
 * At least 90% by 2050
 Until 2030, the Nature Restoration Regulation highlights that Member States should give priority to restoration measures in areas located in Natura 2000 sites (NRR (EU 2024/1991)).<sup><a class="fnref" id="ref-4c-origin" href="#fn-4">[4]</a></sup>
 
-Figure. Decision support flowchart for peatland restoration projects in the context of NRR, art. 4 
-The funding instruments listed in the right-hand boxes were identified as relevant within the context of article 4, NRR. To determine whether your Member State makes use of these instruments, consult its Nature Restoration Plan, which is expected to be published on the Nature Restoration Regulation Reference Portal by September 2026.
+<p class="caption"><strong>Figure 3.</strong>  Decision support flowchart for peatland restoration projects in the context of NRR, art. 4 
+The funding instruments listed in the right-hand boxes were identified as relevant within the context of article 4, NRR. To determine whether your Member State makes use of these instruments, consult its Nature Restoration Plan, which is expected to be published on the Nature Restoration Regulation Reference Portal by September 2026.</p>
 
 ### 3.2.3 Section 2.2: Nature Restoration Regulation, Art. 11
 The Nature Restoration Regulation (NRR)<sup><a class="fnref" id="ref-4d-origin" href="#fn-4">[4]</a></sup>, adopted in 2024, aims at expanding the scope of restoration measures beyond Natura 2000 sites. The NRR sets legally binding targets that include all habitat types listed in Annex I of the Habitat Directive in poor or bad condition, from urban to marine or terrestrial ecosystems.
@@ -44,22 +94,21 @@ Article 11 of the Nature Restoration Regulation is targeting especially peatland
 
 However, Member States are allowed to put in place restoration measures, including rewetting, in areas of peat extraction sites and count those areas as contributing to meeting these targets. In addition, the restoration/rewetting of drained peatlands under other land uses such as forest lands is allowed to contribute to them up to a maximum of 40% (NRR (EU 2024/1991)).<sup><a class="fnref" id="ref-4f-origin" href="#fn-4">[4]</a></sup>
 
-Figure. Decision support flowchart for peatland restoration projects in the context of article 11 of the NRR 
-The funding instruments listed in the boxes were identified as relevant within the context of NRR, art. 11. To determine whether your Member State makes use of these instruments, consult its Nature Restoration Plan, which is expected to be published on the Nature Restoration Regulation Reference Portal by September 2026.
+<p class="caption"><strong>Figure 4.</strong>  Figure. Decision support flowchart for peatland restoration projects in the context of article 11 of the NRR. The funding instruments listed in the boxes were identified as relevant within the context of NRR, art. 11. To determine whether your Member State makes use of these instruments, consult its Nature Restoration Plan, which is expected to be published on the Nature Restoration Regulation Reference Portal by September 2026.</p>
 
 ### 3.2.4 Section 3: Water Framework Directive
 The Water Framework Directive (Directive 2000/60/EC) on establishing a framework for Community action in the field of water policy (referred to as WFD (2000/60/EC))<sup><a class="fnref" id="ref-5-origin" href="#fn-5">[5]</a></sup> is an EU Directive designed to achieve good ecological and chemical status in all surface water bodies, as well as good status for groundwater, across the European Union. For each river basin, which can include a variety of water bodies (rivers, lakes, coastal waters., etc.) a River Basin Management Plan (RBMP) must be created and renewed every six years. The RBMP assesses the water status of the basin, sets environmental objectives and includes the development of a Programme of Measures (PoM) to achieve those objectives (WFD (2000/60/EC)).<sup><a class="fnref" id="ref-5b-origin" href="#fn-5">[5]</a></sup>
 
 Even though peatlands are not considered as separate water bodies under the WFD, they influence surrounding water bodies and associated river basins hydrologically. In some circumstances, peatland management measures, included as basic or supplementary measures in the PoM, may be a necessary measure to achieve the objectives of the WFD. In such cases, peatland restoration and re-creation (sensu restoration) may be made binding through legal obligations or restrictions under local, regional or national law or remain non-binding and supported through voluntary funding schemes within the PoM.
 
-Figure. Decision support flowchart for peatland restoration projects in the context of the Water Framework
-The funding instruments listed in the right-hand boxes were identified as relevant within the context of the Water Framework Directive. To determine whether your Member State makes use of these instruments, consult its (national) River Basin Management Plan(s), which can be found on its governmental website. 
+<p class="caption"><strong>Figure 5.</strong> Decision support flowchart for peatland restoration projects in the context of the Water Framework. **The funding instruments listed in the right-hand boxes were identified as relevant within the context of the Water Framework Directive. To determine whether your Member State makes use of these instruments, consult its (national) River Basin Management Plan(s), which can be found on its governmental website.**</p>
 
 ### 3.2.5 Section 4: Other Scenarios
 Even if peatland restoration is not directly mandated by the Water Framework Directive, the Nature Restoration Regulation, or the Birds and Habitats Directives, it nevertheless contributes to the Nature Restoration Regulation objectives while delivering a wide range of ecosystem services and local co-benefits. Participating in restoration projects or relevant agri-environment schemes can provide you substantial financial support to compensate for income loss.
 Although EU funds are often prioritized for restoration measures linked to EU environmental targets under the Habitats and Birds Directives, the Nature Restoration Regulation, or the Water Framework Directive, they can still support voluntary or independent restoration initiatives.
 
-Figure. Decision support flowchart for peatland restoration projects in other scenarios. 
+
+<p class="caption"><strong>Figure 6.</strong> Decision support flowchart for peatland restoration projects in other scenarios.</p>
 
 ## 3.3 Description of Funding Schemes
 
@@ -120,3 +169,4 @@ Certain current limitations pertain to the identification and description of rel
 Lastly, national funding schemes were not analysed in detail, as the Decision Support System focuses on EU-wide funding opportunities, which may limit the overall comprehensiveness of this assessment.
 
 {% include references.html file="refs/refs_funding.html" %} 
+{% include mermaid.html file="mermaid.html" %}

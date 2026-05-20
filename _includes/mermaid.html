@@ -1,0 +1,36 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      fontFamily: 'Source Sans 3, sans-serif',
+      fontSize: '18px',
+      primaryColor: '#6B9080',
+      primaryTextColor: '#F6FFF8',
+      primaryBorderColor: '#3d6355',
+      lineColor: '#4a6b5e',
+      secondaryColor: '#EAF4F4',
+      tertiaryColor: '#F6FFF8',
+      edgeLabelBackground: '#F6FFF8'
+    },
+flowchart: {
+  htmlLabels: true,
+  curve: 'basis',
+  nodeSpacing: 50,
+  rankSpacing: 70,
+  diagramPadding: 20,
+  useMaxWidth: true,
+  wrappingWidth: 150
+}
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.mermaid .target rect').forEach(rect => {
+        rect.setAttribute('rx', '8');
+        rect.setAttribute('ry', '8');
+      });
+    }, 500);
+  });
+</script>

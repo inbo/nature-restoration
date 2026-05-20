@@ -14,6 +14,11 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-remote-theme
+  - jekyll-mermaid
+
+# Enable mermaid diagrams
+mermaid:
+  src: https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js
 
 exclude:
   - README.md

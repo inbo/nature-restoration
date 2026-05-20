@@ -1,0 +1,100 @@
+// =============================================================================
+// EcoRestoration — Flowchart Styles
+// File: _sass/_flowchart.scss
+// Imported by: _styles.scss  →  @import "flowchart";
+// =============================================================================
+
+.mermaid {
+  font-family: $ff-sans;
+
+  // ── Shape fills ─────────────────────────────────────────────────────────────
+  .greenfill > rect,
+  .greenfill > polygon { fill: $reed !important; stroke: $sedge !important; }
+
+  .redfill > rect,
+  .redfill > polygon   { fill: #8B2635 !important; stroke: #6B1428 !important; }
+
+  .decision > rect,
+  .decision > polygon  { fill: $sedge !important; stroke: $deep-sedge !important; }
+
+  .target > rect       { fill: $mist !important; stroke: $fen !important; }
+
+  // ── Text colors ──────────────────────────────────────────────────────────────
+  .greenfill .nodeLabel,
+  .greenfill foreignObject div,
+  .greenfill foreignObject p { color: #2d4a3e !important; }
+
+  .redfill .nodeLabel,
+  .redfill foreignObject div,
+  .redfill foreignObject p   { color: #F6FFF8 !important; }
+
+  .decision .nodeLabel,
+  .decision foreignObject div,
+  .decision foreignObject p  { color: #F6FFF8 !important; }
+
+  .target .nodeLabel,
+  .target foreignObject div,
+  .target foreignObject p    { color: $deep-forest !important; }
+
+// ── Rectangular boxes only (decision + target) ────────────────────────────────
+.decision foreignObject div,
+.decision foreignObject p,
+.target foreignObject div,
+.target foreignObject p {
+  font-family: $ff-sans !important;
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  padding: 3px 5px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+// ── Diamond labels (yes/no) — keep small ─────────────────────────────────────
+.greenfill foreignObject div,
+.greenfill foreignObject p,
+.redfill foreignObject div,
+.redfill foreignObject p {
+  font-family: $ff-sans !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: 2px 2px !important;
+}
+//if boxes are too wide → lower wrappingWidth. If text overflows → increase wrappingWidth or lower font-size. If diamonds are too big → lower fontSize in themeVariables.
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 600px) {
+  .mermaid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    svg { min-width: 480px; }
+  }
+}
+
+  // ── Connectors ──────────────────────────────────────────────────────────────
+  .edgePath .path {
+    stroke: $muted !important;
+    stroke-width: 1.5px !important;
+  }
+
+  .arrowheadPath {
+    fill: $muted !important;
+    stroke: $muted !important;
+  }
+
+  // ── Edge labels ─────────────────────────────────────────────────────────────
+  .edgeLabel {
+    background-color: $bloom !important;
+
+    span, p {
+      color: $muted !important;
+      font-family: $ff-sans !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.05em !important;
+      background-color: $bloom !important;
+    }
+  }
+}

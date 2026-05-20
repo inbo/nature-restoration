@@ -95,3 +95,65 @@
   </script>
 </body>
 </html>
+
+<!-- Mermaid support: convert fenced code blocks (```mermaid) and initialize -->
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+
+<script>
+  (function () {
+    function convertMermaidCodeFences() {
+      try {
+        var codeBlocks = document.querySelectorAll("pre > code.language-mermaid, pre > code.mermaid");
+        codeBlocks.forEach(function (code) {
+          var pre = code.parentElement;
+          var container = pre.parentElement;
+          var div = document.createElement("div");
+          div.className = "mermaid";
+          div.textContent = code.textContent; // preserve raw diagram text
+          container.replaceChild(div, pre);
+        });
+      } catch (e) {
+        console.warn("Mermaid code fence conversion failed:", e);
+      }
+    }
+
+    function initMermaidNow() {
+      try {
+        if (!window.mermaid) return false;
+        convertMermaidCodeFences();
+        if (typeof mermaid.initialize === "function") {
+          mermaid.initialize({ startOnLoad: true });
+        }
+        if (typeof mermaid.run === "function") {
+          mermaid.run({ querySelector: ".mermaid" });
+        } else if (typeof mermaid.init === "function") {
+          mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+        }
+        return true;
+      } catch (e) {
+        console.error("Mermaid initialization error:", e);
+        return false;
+      }
+    }
+
+    function whenReady(fn) {
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", fn);
+      } else {
+        fn();
+      }
+    }
+
+    whenReady(function () {
+      if (initMermaidNow()) return;
+      var attempts = 0;
+      var timer = setInterval(function () {
+        attempts++;
+        if (initMermaidNow() || attempts > 50) {
+          clearInterval(timer);
+        }
+      }, 100);
+    });
+  })();
+</script>
