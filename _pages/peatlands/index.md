@@ -28,12 +28,41 @@ Peatlands may appear quiet and unassuming, yet they hold immense power in shapin
   
   <div class="card">
     <div class="card-image-wrapper">
-      <img class="card-image" src="{{ '/assets/backgrounds/De_Teut.jpg' | relative_url }}" alt="De Teut, Belgium">
-      <span class="card-attribution">© Yves Adams, Vilda</span>
+      <img class="card-image" src="{{ '/assets/backgrounds/assessment.jpg' | relative_url }}" alt="Flooded area">
+      <span class="card-attribution">© Toon de Vos</span>
     </div>
-    <h3 class="card-title">Restoration Guidelines</h3>
-    <p class="card-excerpt">Step-by-step guidance for restoring degraded peatlands across Europe.</p>
-    <a href="{{ '/peatlands/guidelines/' | relative_url }}" class="btn">Learn more</a>
+    <h3 class="card-title">Assessment</h3>
+    <p class="card-excerpt">Guidelines for assessing the site conditions.</p>
+    <a href="{{ '/peatlands/assessment/' | relative_url }}" class="btn">Learn more</a>
+  </div>
+
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/backgrounds/planning.jpg' | relative_url }}" alt="Planning people">
+    </div>
+    <h3 class="card-title">Planning and design</h3>
+    <p class="card-excerpt">Guidelines for planning and design.</p>
+    <a href="{{ '/peatlands/planning-design/' | relative_url }}" class="btn">Learn more</a>
+  </div>
+
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/backgrounds/implementation.jpg' | relative_url }}" alt="Plank path in nature area">
+      <span class="card-attribution">© Kasias</span>
+    </div>
+    <h3 class="card-title">Implementation</h3>
+    <p class="card-excerpt">Guidelines for implementation.</p>
+    <a href="{{ '/peatlands/implementation/' | relative_url }}" class="btn">Learn more</a>
+  </div>
+
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/backgrounds/management.jpg' | relative_url }}" alt="Tractor performing mowing management">
+      <span class="card-attribution">© Mirko Fabian</span>
+    </div>
+    <h3 class="card-title">Monitoring and management</h3>
+    <p class="card-excerpt">Guidelines for monitoring and management.</p>
+    <a href="{{ '/peatlands/monitoring-management/' | relative_url }}" class="btn">Learn more</a>
   </div>
 
   <div class="card">

@@ -7,8 +7,14 @@ main:
     children:
       - title: Peatlands in the EU
         url: /peatlands/peatlands-eu/
-      - title: Guidelines
-        url: /peatlands/guidelines/
+      - title: Assessment
+        url: /peatlands/assessment/      
+      - title: Planning and design
+        url: /peatlands/planning-design/
+      - title: Implementation
+        url: /peatlands/implementation/
+      - title: Monitoring and management
+        url: /peatlands/monitoring-management/
       - title: Restoration funding
         url: /peatlands/restoration-funding/
   - title: Landscape perspectives
