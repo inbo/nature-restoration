@@ -110,7 +110,9 @@ This webpage is not intended to be an exhaustive list of all monitoring techniqu
 ### Data collection
 Monitoring is the basis for determining whether restoration targets have been reached. Thus the data collected during this process is critical to ensure reliable conclusions can be made. 
 
-{% include figure.html src="/assets/images/monitoring_fluxes.jpg" caption="<strong>Figure .</strong> Greenhouse gas flux measurements in the Leiemeersen (Belgium)." %}
+<div style="max-width: 500px;">
+{% include figure.html src="/assets/images/monitoring_fluxes.jpg" caption="<strong>Figure .</strong> Greenhouse gas flux measurements in the Leiemeersen (Belgium).  &copy; Maud Raman, INBO" %}
+</div>
 
 Methods for data collection should be clearly outlined in the monitoring plan and follow standardized and systematic protocols to ensure quality assurance and standards are upheld throughout the data collection process. Having well-defined protocols can allow for easy training of monitoring responsibilities throughout the restoration project and help prevent against observation bias.<sup><a class="fnref" id="ref-20f-origin" href="#fn-20">[20]</a></sup>
 

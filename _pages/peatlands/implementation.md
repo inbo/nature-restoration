@@ -10,9 +10,34 @@ permalink: /peatlands/implementation/
 Peatland restoration requires practical decisions across hydrology, water quality, vegetation, land management, and long-term governance. The implementation section brings together tools and guidance to support practitioners and policymakers during the restoration process. The tools are designed to help users identify peatland habitat types, assess restoration barriers, explore country-specific guidance, and adapt restoration measures to local ecological conditions. Because peatland systems are dynamic and often affected by multiple interacting pressures, successful restoration depends on adaptive management, collaboration between planning and field teams, and continuous learning throughout implementation.
 
 ### Habitat Identification Decision Tree
-Peatlands differ strongly between regions and site conditions. Restoration measures that are appropriate for one habitat type may not work for another. The habitat identification tool helps users narrow down the most likely habitat type based on ecological characteristics and site conditions.
-
+Peatlands differ strongly between regions and site conditions. Restoration measures that are appropriate for one habitat type may not work for another. 
+The habitat identification tool helps users narrow down the most likely habitat type based on ecological characteristics and site conditions.
 Once a habitat type is identified, the tool links directly to available guideline sheets where they exist.
+
+<div class="card-grid">
+  
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/images/aapa.jpg' | relative_url }}" alt="Aapa mire">
+      <span class="card-attribution">© Hannu Nousiainen</span>
+    </div>
+  </div>
+  
+   <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/images/zonnedauw_teut.jpg' | relative_url }}" alt="Mire Teut, Belgium">
+      <span class="card-attribution">© Yves Adams, Vilda</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/images/veenpluis_buitengoor.jpg' | relative_url }}" alt="Buitengoor, Belgium">
+      <span class="card-attribution">© Yves Adams, Vilda</span>
+    </div>
+  </div>
+
+</div>
 
 {% include peatland-wizard.html %}
 
@@ -39,7 +64,6 @@ The interactive map allows users to explore country-specific guideline documents
 The map is intended to improve access to national guidance and support knowledge exchange between regions.
 
 {% include peatland-guidelines-map.html %}
-
 
 ### The human factor in restoration
 Inadequate implementation of peatland restoration projects appear avoidable, but are frequently cited as a cause of poor restoration outcomes (Herb & Finlayson, 2023; Stelk et al., 2017). To avoid this, optimal results can be achieved through collaboration between the planning and on-site teams to translate desired outcomes into practical directions. Appropriate training should be provided to workers so that any unfamiliarity with peatland conditions is accounted for, and that any unique skills or techniques associated with particular restoration treatments are understood. For example, the techniques required for creating hummock-hollow microtopography to establish diverse habitats for colonization, differ significantly from establishing an even surface required for rewetting.  On-site supervision from a terrain expert is also recommended to identify high-risk zones and provide guidance to workers.
