@@ -1,0 +1,1482 @@
+<style>
+.fenw {
+  font-family: var(--ff-sans, 'Source Sans 3', sans-serif);
+  margin: var(--sp-lg, 2rem) 0;
+}
+
+/* ── Phase tiles ──────────────────────────────────────────────────────────── */
+.fenw__tiles {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.fenw__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: var(--ff-sans, 'Source Sans 3', sans-serif);
+  text-align: center;
+}
+
+.fenw__tile-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid var(--fen, #CCE3DE);
+  background: var(--mist, #EAF4F4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, transform 0.15s;
+  position: relative;
+}
+
+.fenw__tile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.fenw__tile-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.fenw__tile:hover .fenw__tile-img {
+  border-color: var(--sedge, #6B9080);
+  transform: translateY(-2px);
+}
+
+.fenw__tile.active .fenw__tile-img {
+  border-color: var(--sedge, #6B9080);
+  border-width: 2.5px;
+  box-shadow: 0 0 0 3px rgba(107,144,128,0.2);
+}
+
+.fenw__tile.done .fenw__tile-img {
+  border-color: var(--reed, #A4C3B2);
+}
+
+.fenw__tile.done .fenw__tile-img::after {
+  content: '✓';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background: var(--sedge, #6B9080);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fenw__tile-label {
+  font-size: clamp(0.55rem, 1vw, 0.68rem);
+  font-weight: 600;
+  color: var(--muted, #4a6b5e);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.fenw__tile.active .fenw__tile-label {
+  color: var(--sedge, #6B9080);
+}
+
+/* Progress bar below tiles */
+.fenw__progress-bar {
+  height: 3px;
+  background: var(--fen, #CCE3DE);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.fenw__progress-fill {
+  height: 100%;
+  background: var(--sedge, #6B9080);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.fenw__phase-title {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-weight: 600;
+  color: var(--sedge, #6B9080);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--fen, #CCE3DE);
+}
+
+@media (max-width: 500px) {
+  .fenw__tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+.fenw__card {
+  background: var(--bloom, #F6FFF8);
+  border: 1px solid var(--fen, #CCE3DE);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fenw__question {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-weight: 500;
+  color: var(--deep-forest, #1a2e28);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.fenw__hint {
+  font-size: 0.8rem;
+  color: var(--muted, #4a6b5e);
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: -0.25rem;
+}
+
+/* ── Warning / mistake callout ───────────────────────────────────────────── */
+.fenw__warning {
+  background: #fff8e6;
+  border-left: 3px solid #c89e5a;
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: #5a4020;
+  line-height: 1.6;
+}
+
+.fenw__warning strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7a6030;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Urgent question callout ─────────────────────────────────────────────── */
+.fenw__urgent {
+  background: var(--mist, #EAF4F4);
+  border-left: 3px solid var(--sedge, #6B9080);
+  border-radius: 0 4px 4px 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--bog-ink, #233d35);
+  line-height: 1.6;
+}
+
+.fenw__urgent strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sedge, #6B9080);
+  margin-bottom: 0.25rem;
+}
+
+/* ── Actions ─────────────────────────────────────────────────────────────── */
+.fenw__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.fenw__btn {
+  flex: 1;
+  min-width: 90px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  border: none;
+  font-family: var(--ff-sans, 'Source Sans 3', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.03em;
+}
+
+.fenw__btn:active { transform: scale(0.98); }
+
+.fenw__btn--yes {
+  background: var(--sedge, #6B9080);
+  color: var(--bloom, #F6FFF8);
+}
+.fenw__btn--yes:hover { background: var(--deep-sedge, #3d6355); }
+
+.fenw__btn--no {
+  background: #8B2635;
+  color: #F6FFF8;
+}
+.fenw__btn--no:hover { background: #6B1428; }
+
+.fenw__btn--ghost {
+  flex: 0;
+  background: transparent;
+  color: var(--muted, #4a6b5e);
+  border: 1px solid var(--fen, #CCE3DE);
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  min-width: auto;
+}
+.fenw__btn--ghost:hover {
+  background: var(--mist, #EAF4F4);
+  color: var(--deep-forest, #1a2e28);
+}
+
+/* ── Breadcrumb ──────────────────────────────────────────────────────────── */
+.fenw__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.fenw__crumb {
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--mist, #EAF4F4);
+  color: var(--muted, #4a6b5e);
+  white-space: nowrap;
+}
+.fenw__crumb--yes { background: #d4e8e1; color: #2d5a4a; }
+.fenw__crumb--no  { background: #f0d0d4; color: #6B1428; }
+
+/* ── Action box (recommendations) ───────────────────────────────────────── */
+.fenw__action-box {
+  background: var(--mist, #EAF4F4);
+  border: 1px solid var(--fen, #CCE3DE);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--bog-ink, #233d35);
+  line-height: 1.7;
+}
+
+.fenw__action-box h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sedge, #6B9080);
+  margin-bottom: 0.5rem;
+  font-family: var(--ff-sans, 'Source Sans 3', sans-serif);
+}
+
+.fenw__action-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.fenw__action-box li { margin-bottom: 0.25rem; }
+
+/* ── Summary / final result ──────────────────────────────────────────────── */
+.fenw__summary {
+  background: var(--bloom, #F6FFF8);
+  border: 1.5px solid var(--sedge, #6B9080);
+  border-radius: 8px;
+  padding: 1.5rem;
+  animation: fenwFade 0.4s ease;
+}
+
+@keyframes fenwFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fenw__summary-title {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  color: var(--deep-forest, #1a2e28);
+  margin-bottom: 1rem;
+}
+
+.fenw__priority {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.fenw__priority-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.fenw__priority-item.critical {
+  background: #f9e8ea;
+  border-left: 3px solid #8B2635;
+  color: #4a1520;
+}
+
+.fenw__priority-item.important {
+  background: #fff3d6;
+  border-left: 3px solid #c89e5a;
+  color: #5a3a00;
+}
+
+.fenw__priority-item.monitor {
+  background: var(--mist, #EAF4F4);
+  border-left: 3px solid var(--sedge, #6B9080);
+  color: var(--bog-ink, #233d35);
+}
+
+.fenw__priority-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.fenw__phase-summary {
+  margin-bottom: 1rem;
+}
+
+.fenw__phase-summary h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sedge, #6B9080);
+  margin-bottom: 0.4rem;
+  font-family: var(--ff-sans, 'Source Sans 3', sans-serif);
+}
+
+.fenw__phase-summary p {
+  font-size: 0.85rem;
+  color: var(--bog-ink, #233d35);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .fenw__card { padding: 1.1rem; }
+  .fenw__btn  { min-width: 70px; font-size: 0.8rem; }
+}
+</style>
+
+<div class="fenw" id="fen-wizard">
+  <div class="fenw__tiles" id="fenw-tiles"></div>
+  <div class="fenw__progress-bar"><div class="fenw__progress-fill" id="fenw-progress"></div></div>
+  <div class="fenw__phase-title" id="fenw-phase-title"></div>
+  <div class="fenw__breadcrumb" id="fenw-breadcrumb"></div>
+  <div id="fenw-content"></div>
+</div>
+
+<script>
+(function () {
+
+// ── Phase definitions ────────────────────────────────────────────────────────
+var PHASES = [
+  { id: "hydrology",  label: "Hydrology",      num: "1", img: "/nature-restoration/assets/images/1hydrology.jpg"},
+  { id: "chemistry",  label: "Water chemistry", num: "2", img: "/nature-restoration/assets/images/2water_chemistry.jpg"},
+  { id: "nutrients",  label: "Nutrients",       num: "3", img: "/nature-restoration/assets/images/3nutrients.jpg"},
+  { id: "management",label: "Management",      num: "4", img: "/nature-restoration/assets/images/4management.jpg"},
+  { id: "species",    label: "Species",         num: "5", img: "/nature-restoration/assets/images/5species.jpg" },
+  { id: "resilience",label: "Resilience",      num: "6", img: "/nature-restoration/assets/images/6resilience.jpg" }
+];
+
+// ── Decision trees ───────────────────────────────────────────────────────────
+// node: { q, hint?, warning?, urgent?, yes, no, action? }
+// action node: { action: {title, items[]}, next }
+// result node: { result, desc, priority }  (used mid-phase for blocking issues)
+
+var TREES = {
+
+  // ── 1. HYDROLOGY ────────────────────────────────────────────────────────
+  hydrology: {
+    h1: {
+      q: "Is the peat surface staying saturated year-round?",
+      hint: "Check seasonal dipwell records or observe standing water, peat colour, and aerobic oxidation signs.",
+      urgent: "Key question: How deep does the water table fall in summer? Are hidden drainage pipes present?",
+      yes: "h_fluctuate",
+      no:  "h_drainage"
+    },
+    h_drainage: {
+      q: "Is artificial drainage present at the site?",
+      hint: "Look for ditches, tile drains, channels, or pumping infrastructure.",
+      warning: "Common mistake: Blocking ditches alone often fails if the groundwater system is still disrupted. Always map all drainage pathways first.",
+      yes: "h_drains_active",
+      no:  "h_extraction"
+    },
+    h_drains_active: {
+      q: "Are the drains still actively removing water?",
+      hint: "Check flow rates, water levels in ditches, and whether blocked drains would restore saturation.",
+      yes: {
+        action: {
+          title: "Priority hydrology actions",
+          items: [
+            "Block drains and reduce outflow",
+            "Raise water tables using dams or bunds",
+            "Restore groundwater retention capacity",
+            "Reduce nearby groundwater extraction",
+            "Monitor: seasonal water levels, chemistry, peat saturation"
+          ]
+        },
+        next: "h_fluctuate"
+      },
+      no: {
+        action: {
+          title: "Investigate hidden drainage",
+          items: [
+            "Survey for buried tile drains or subsurface pipes",
+            "Conduct tracer tests or dye tracing",
+            "Map groundwater flow directions",
+            "Assess whether partial blockage is maintaining drainage"
+          ]
+        },
+        next: "h_extraction"
+      }
+    },
+    h_extraction: {
+      q: "Is groundwater extraction occurring nearby?",
+      hint: "Check for agricultural pumping, water supply boreholes, or industrial abstraction within the catchment.",
+      warning: "Common mistake: Ignoring surrounding land use. Nearby pumping or drainage may continue degrading the fen even after on-site rewetting.",
+      yes: "h_extraction_summer",
+      no:  "h_recharge"
+    },
+    h_extraction_summer: {
+      q: "Is extraction reducing summer groundwater levels at the fen?",
+      hint: "Compare water level records at the fen with extraction records. Summer correlation is key.",
+      yes: {
+        action: {
+          title: "Groundwater abstraction actions",
+          items: [
+            "Negotiate abstraction reduction with operators",
+            "Apply for regulatory review of abstraction licences",
+            "Identify alternative water sources for abstractors",
+            "Set minimum groundwater level thresholds as legal conditions"
+          ]
+        },
+        next: "h_fluctuate"
+      },
+      no: "h_recharge"
+    },
+    h_recharge: {
+      q: "Has the catchment recharge area been significantly altered?",
+      hint: "Urbanisation, forestry, intensive agriculture, or impermeable surfacing in the recharge zone can reduce groundwater supply.",
+      warning: "Common mistake: Restoring too small an area. Tiny restored patches often cannot stabilize hydrology — catchment-scale planning is usually needed.",
+      yes: {
+        action: {
+          title: "Catchment restoration actions",
+          items: [
+            "Map the recharge area and identify land-use changes",
+            "Engage with land managers in the catchment",
+            "Explore landscape-scale restoration planning",
+            "Reduce impermeable surfaces where possible",
+            "Note: this is often much harder than local rewetting"
+          ]
+        },
+        next: "h_fluctuate"
+      },
+      no: "h_fluctuate"
+    },
+    h_fluctuate: {
+      q: "Are seasonal water table fluctuations excessive (>40 cm seasonal drop)?",
+      hint: "Even if annual averages look acceptable, short summer droughts may still kill fen species.",
+      warning: "Common mistake: Measuring only average water levels. Short summer droughts may still kill fen species even if annual averages appear acceptable.",
+      yes: "h_rapid_drain",
+      no:  "h_oxidation"
+    },
+    h_rapid_drain: {
+      q: "Does rapid drainage occur after rainfall events?",
+      hint: "Water levels rise quickly after rain but fall again within days rather than remaining elevated.",
+      yes: {
+        action: {
+          title: "Retention improvement actions",
+          items: [
+            "Increase water retention capacity with bunds or barriers",
+            "Create shallow surface water storage features",
+            "Reduce lateral flow losses",
+            "Consider creating microtopographic variation to hold water"
+          ]
+        },
+        next: "h_oxidation"
+      },
+      no: {
+        action: {
+          title: "Investigate groundwater instability",
+          items: [
+            "Install additional dipwells across the site",
+            "Correlate water levels with rainfall and evapotranspiration",
+            "Check for subsurface preferential flow paths",
+            "Consult a hydrogeologist"
+          ]
+        },
+        next: "h_oxidation"
+      }
+    },
+    h_oxidation: {
+      q: "Is peat oxidation still actively occurring?",
+      hint: "Signs: dark crumbly peat, CO₂ emissions, peat surface subsidence, or peat bulk density increasing over time.",
+      warning: "Common mistake: Overflooding the site. Deep permanent flooding can convert fen into swamp or open water — target water table within 10–20 cm of surface, not deep inundation.",
+      yes: {
+        action: {
+          title: "Peat oxidation — urgent response",
+          items: [
+            "Water table likely still too low — review rewetting measures",
+            "Target water table within 10–20 cm of peat surface",
+            "Monitor peat surface elevation over time",
+            "Consider using nutrient-poor water sources only"
+          ]
+        },
+        next: "__phase_end__"
+      },
+      no: "__phase_end__"
+    }
+  },
+
+  // ── 2. WATER CHEMISTRY ──────────────────────────────────────────────────
+  chemistry: {
+    c1: {
+      q: "Is the incoming water nutrient-rich surface water (rivers, agricultural runoff)?",
+      hint: "Check conductivity, phosphorus, and nitrate levels in incoming water. Agricultural catchments often have elevated nutrients.",
+      warning: "Common mistake: Assuming all water improves wetlands. Fen restoration requires specific water chemistry — not simply 'more water'.",
+      urgent: "Key question: Is incoming water nutrient-poor enough for the target fen type?",
+      yes: "c_divert",
+      no:  "c_polluted_gw"
+    },
+    c_divert: {
+      q: "Can the nutrient-rich inflow be diverted or intercepted?",
+      hint: "Buffer zones, reed bed filtration, hydrological separation, or inflow diversion may be feasible.",
+      yes: {
+        action: {
+          title: "Clean hydrology restoration",
+          items: [
+            "Design inflow diversion to bypass nutrient-rich water",
+            "Create buffer strips or reed bed pre-treatment",
+            "Restore clean groundwater as the primary water source",
+            "Monitor chemistry after diversion"
+          ]
+        },
+        next: "c_phosphorus"
+      },
+      no: {
+        action: {
+          title: "High restoration risk — chemistry barrier",
+          items: [
+            "Nutrient-rich inflow that cannot be diverted severely limits restoration",
+            "Consider whether alternative restoration goals are realistic",
+            "Explore land-use agreements with upstream landowners",
+            "Investigate regulatory options to reduce pollution"
+          ]
+        },
+        next: "c_phosphorus"
+      }
+    },
+    c_polluted_gw: {
+      q: "Is the groundwater polluted (nitrates, sulfates, heavy metals, pesticides)?",
+      hint: "Agricultural land nearby, landfills, or industrial sites may contaminate groundwater reaching the fen.",
+      yes: "c_source_id",
+      no:  "c_phosphorus"
+    },
+    c_source_id: {
+      q: "Can the contamination source be identified and removed?",
+      hint: "Groundwater contamination tracing, regulatory action, or land-use change may be required.",
+      yes: {
+        action: {
+          title: "Source removal actions",
+          items: [
+            "Work with regulators to address contamination source",
+            "Pursue legal or planning mechanisms if needed",
+            "Monitor recovery of groundwater quality over time"
+          ]
+        },
+        next: "c_phosphorus"
+      },
+      no: {
+        action: {
+          title: "Long-term treatment needed",
+          items: [
+            "Consider constructed wetland pre-treatment",
+            "Accept limited restoration potential until source is addressed",
+            "Set realistic, adjusted restoration targets",
+            "Continue monitoring for any improvement"
+          ]
+        },
+        next: "c_phosphorus"
+      }
+    },
+    c_phosphorus: {
+      q: "Are phosphorus concentrations elevated in peat water or incoming water?",
+      hint: "Target phosphorus <0.05 mg/L for species-rich fen recovery. Higher levels typically favour competitive vegetation.",
+      warning: "Common mistake: Ignoring phosphorus legacy. Old phosphorus stored in soils can continue leaking for decades after external sources are removed.",
+      yes: "c_p_external",
+      no:  "c_nitrogen"
+    },
+    c_p_external: {
+      q: "Is phosphorus entering from external sources (not just internal release)?",
+      hint: "If external phosphorus loading has been stopped but levels remain high, internal release from peat is likely.",
+      warning: "Common mistake: Rewetting oxidized peat too quickly. This can trigger phosphorus release and algal blooms — consider phased rewetting.",
+      yes: {
+        action: {
+          title: "Stop external phosphorus loading first",
+          items: [
+            "Identify and stop all external phosphorus inputs",
+            "Install buffer zones between agricultural land and fen",
+            "Divert phosphorus-rich inflows",
+            "Without this step, restoration rarely succeeds"
+          ]
+        },
+        next: "c_nitrogen"
+      },
+      no: {
+        action: {
+          title: "Internal phosphorus release management",
+          items: [
+            "Consider phased rewetting to reduce release pulse",
+            "Biomass harvesting to export phosphorus",
+            "Long-term mowing with removal may gradually reduce stocks",
+            "Topsoil removal if levels are severely elevated",
+            "This process may take decades"
+          ]
+        },
+        next: "c_nitrogen"
+      }
+    },
+    c_nitrogen: {
+      q: "Is nitrogen deposition or loading excessive?",
+      hint: "High atmospheric N deposition (>10 kg N/ha/yr) is common near agricultural areas. Check national deposition maps.",
+      urgent: "Key question: Is nitrogen deposition overwhelming recovery? Even remote fens may remain nutrient-enriched from atmospheric deposition.",
+      yes: "c_n_compensate",
+      no:  "c_ph"
+    },
+    c_n_compensate: {
+      q: "Can biomass export management compensate for nitrogen inputs?",
+      hint: "Regular mowing with removal of cut material exports nitrogen from the system over time.",
+      yes: {
+        action: {
+          title: "Nitrogen management through biomass export",
+          items: [
+            "Implement regular mowing with full biomass removal",
+            "Time cuts to maximise nutrient export",
+            "Consider grazing as an alternative export mechanism",
+            "Monitor bryophyte recovery as an indicator of nitrogen reduction"
+          ]
+        },
+        next: "c_ph"
+      },
+      no: {
+        action: {
+          title: "Nitrogen limitation on biodiversity",
+          items: [
+            "Accept that biodiversity recovery may be limited",
+            "Focus restoration on nutrient-tolerant fen communities",
+            "Advocate for reduced nitrogen emissions at policy level",
+            "Maintain management to prevent further degradation"
+          ]
+        },
+        next: "c_ph"
+      }
+    },
+    c_ph: {
+      q: "Is the pH appropriate for the target fen type?",
+      hint: "Rich fens: pH 6–8. Poor fens: pH 4.5–6. Bogs: pH 3–4.5. Mismatched chemistry will prevent target species recovery.",
+      warning: "Common mistake: Misidentifying fen type. Acidic fens and calcareous fens require very different chemistry and management.",
+      yes: "__phase_end__",
+      no: {
+        action: {
+          title: "Reassess restoration goals",
+          items: [
+            "Re-evaluate the target fen type based on actual water chemistry",
+            "Consider whether the groundwater source can be changed",
+            "Adjust species recovery targets to match actual chemistry",
+            "Consult with a fen ecologist to redefine realistic goals"
+          ]
+        },
+        next: "__phase_end__"
+      }
+    }
+  },
+
+  // ── 3. NUTRIENTS ────────────────────────────────────────────────────────
+  nutrients: {
+    n1: {
+      q: "Is vegetation excessively productive (dense reeds, nettles, tall grasses)?",
+      hint: "High productivity indicates elevated nutrients. Compare with reference fen sites — productive monocultures are not a good sign.",
+      urgent: "Key question: Are nutrients entering from surrounding land? Is phosphorus trapped in peat or sediments?",
+      yes: "n_external",
+      no:  "n_bryophytes"
+    },
+    n_external: {
+      q: "Are external nutrients still entering the site?",
+      hint: "Check for nutrient-rich inflows, agricultural runoff, or atmospheric deposition from nearby sources.",
+      warning: "Common mistake: Treating symptoms instead of nutrient sources. Cutting vegetation without stopping nutrient inflow rarely works.",
+      yes: {
+        action: {
+          title: "Stop nutrient inflow — highest priority",
+          items: [
+            "Stop all external nutrient inputs before any vegetation management",
+            "Install buffer zones or hydrological separation",
+            "Without this step, all other restoration effort is undermined"
+          ]
+        },
+        next: "n_psoil"
+      },
+      no: "n_psoil"
+    },
+    n_psoil: {
+      q: "Is phosphorus stored in shallow peat or sediments (internal loading)?",
+      hint: "Internal phosphorus release often follows rewetting of oxidized peat. High iron-bound phosphorus is common in degraded fens.",
+      yes: "n_topsoil",
+      no: "n_bryophytes"
+    },
+    n_topsoil: {
+      q: "Is topsoil or sediment removal physically and financially feasible?",
+      hint: "Topsoil removal can effectively reduce phosphorus legacy but is expensive and must be done carefully to avoid destroying seed banks.",
+      warning: "Common mistake: Removing topsoil too aggressively. This can destroy seed banks and peat structure. Phased, shallow removal is usually better.",
+      yes: {
+        action: {
+          title: "Phased topsoil removal",
+          items: [
+            "Remove only the most nutrient-enriched surface layer",
+            "Retain deeper peat and seed bank material where possible",
+            "Dispose of removed material off-site",
+            "Monitor phosphorus levels after removal",
+            "Follow with biomass export management"
+          ]
+        },
+        next: "n_bryophytes"
+      },
+      no: {
+        action: {
+          title: "Long-term biomass export strategy",
+          items: [
+            "Implement regular mowing with full removal of cut biomass",
+            "Never leave cut material on site — nutrients recycle back",
+            "Consider grazing with removal of livestock during nutrient-sensitive periods",
+            "Accept that nutrient reduction will take many years to decades"
+          ]
+        },
+        next: "n_bryophytes"
+      }
+    },
+    n_bryophytes: {
+      q: "Are fen bryophytes (mosses) recovering or present?",
+      hint: "Sphagnum, brown mosses (Calliergon, Scorpidium), and other fen mosses are sensitive indicators of low-nutrient conditions.",
+      yes: "n_peat_acc",
+      no: {
+        action: {
+          title: "Nutrients likely still too high",
+          items: [
+            "Continue biomass export management",
+            "Reassess whether external nutrient inputs have truly been stopped",
+            "Check for internal phosphorus release following rewetting",
+            "Monitor water chemistry seasonally — not just annual averages"
+          ]
+        },
+        next: "n_peat_acc"
+      }
+    },
+    n_peat_acc: {
+      q: "Is peat accumulation restarting?",
+      hint: "Signs: Sphagnum growth, brown moss development, organic matter building up, low decomposition rates.",
+      yes: "__phase_end__",
+      no: {
+        action: {
+          title: "Peat formation not yet restarting",
+          items: [
+            "Check whether decomposition still exceeds production",
+            "Reassess water table stability and nutrient levels",
+            "Peat accumulation is a long-term goal — focus on enabling conditions first",
+            "May take 10–30 years before measurable peat formation resumes"
+          ]
+        },
+        next: "__phase_end__"
+      }
+    }
+  },
+
+  // ── 4. MANAGEMENT ───────────────────────────────────────────────────────
+  management: {
+    m1: {
+      q: "Is scrub or woodland encroaching and suppressing fen vegetation?",
+      hint: "Willow, alder, birch, or invasive shrubs shading out fen specialists is a common degradation pathway.",
+      urgent: "Key question: Which management regime historically maintained this fen? Should grazing or mowing be used?",
+      yes: "m_scrub_cause",
+      no:  "m_litter"
+    },
+    m_scrub_cause: {
+      q: "Is the scrub encroachment primarily caused by drying of the fen?",
+      hint: "If the fen is drying out, scrub will return rapidly after removal unless hydrology is restored first.",
+      warning: "Common mistake: Removing scrub before restoring wetness. Scrub usually returns quickly if the fen remains dry.",
+      yes: {
+        action: {
+          title: "Restore hydrology before scrub removal",
+          items: [
+            "Prioritise water table restoration before any large-scale vegetation clearing",
+            "Only remove scrub once saturation is restored and stable",
+            "Phased approach: restore hydrology → clear scrub → maintain"
+          ]
+        },
+        next: "m_litter"
+      },
+      no: {
+        action: {
+          title: "Phased scrub removal",
+          items: [
+            "Remove scrub in phases to avoid disturbance shock",
+            "Follow immediately with mowing or grazing to prevent regrowth",
+            "Maintain open conditions through regular management",
+            "Monitor fen vegetation response"
+          ]
+        },
+        next: "m_litter"
+      }
+    },
+    m_litter: {
+      q: "Is litter accumulation suppressing fen specialist species?",
+      hint: "Thick layers of dead plant material can smother low-growing mosses and specialist herbs.",
+      yes: "m_mow_feasible",
+      no:  "m_invasive"
+    },
+    m_mow_feasible: {
+      q: "Is mechanical mowing feasible at this site?",
+      hint: "Soft peat, access difficulties, or sensitive species may limit mowing options.",
+      warning: "Common mistake: Using heavy machinery on sensitive peat. This can compact and damage peat layers — use specialist low-ground-pressure equipment.",
+      yes: {
+        action: {
+          title: "Seasonal mowing programme",
+          items: [
+            "Mow in late summer or autumn after flowering and seeding",
+            "Remove all cut biomass from the site",
+            "Avoid mowing during bird breeding season (typically April–July)",
+            "Use low-ground-pressure machinery only",
+            "Monitor litter depth and fen specialist response"
+          ]
+        },
+        next: "m_invasive"
+      },
+      no: {
+        action: {
+          title: "Controlled grazing assessment",
+          items: [
+            "Assess suitability of low-intensity grazing (cattle, ponies, or geese)",
+            "Avoid overgrazing — excessive grazing damages moss layers",
+            "Graze in autumn or winter to reduce disturbance to breeding species",
+            "Monitor vegetation response and peat surface condition"
+          ]
+        },
+        next: "m_invasive"
+      }
+    },
+    m_invasive: {
+      q: "Are invasive species spreading and threatening fen communities?",
+      hint: "Common fen invaders include Himalayan balsam, rhododendron, grey willow, or non-native grasses.",
+      yes: {
+        action: {
+          title: "Targeted invasive control",
+          items: [
+            "Identify species and effective control methods",
+            "Prioritise eradication before population expands",
+            "Coordinate with neighbouring land managers",
+            "Plan repeated follow-up treatments — single removal rarely sufficient"
+          ]
+        },
+        next: "m_longterm"
+      },
+      no: "m_longterm"
+    },
+    m_longterm: {
+      q: "Is long-term management funding and governance secured?",
+      hint: "Fen restoration requires decades of continued management. Without secured funding, gains are easily reversed.",
+      warning: "Common mistake: Treating restoration as finished. Fen systems remain dynamic and vulnerable indefinitely — adaptive management must continue.",
+      yes: "__phase_end__",
+      no: {
+        action: {
+          title: "Management continuity — high risk",
+          items: [
+            "Develop a long-term management plan with costed activities",
+            "Explore agri-environment schemes, LIFE funding, or conservation endowments",
+            "Engage partner organisations for co-management",
+            "Document all restoration and management actions for continuity"
+          ]
+        },
+        next: "__phase_end__"
+      }
+    }
+  },
+
+  // ── 5. SPECIES ──────────────────────────────────────────────────────────
+  species: {
+    s1: {
+      q: "Are remnant fen specialist species still present at the site?",
+      hint: "Look for characteristic sedges (Carex spp.), brown mosses, Sphagnum, rare orchids, or specialist invertebrates.",
+      urgent: "Key question: Which species historically occurred here? Are viable seed banks still present?",
+      yes: "s_stable",
+      no:  "s_nearby"
+    },
+    s_stable: {
+      q: "Are remnant populations stable or expanding?",
+      hint: "Declining populations despite ongoing management suggest hidden stressors.",
+      yes: {
+        action: {
+          title: "Prioritise habitat continuity",
+          items: [
+            "Maintain current conditions that support remnant populations",
+            "Ensure management does not disturb key microsites",
+            "Monitor population trends annually",
+            "Use remnant populations as seed sources for adjacent areas"
+          ]
+        },
+        next: "s_assisted"
+      },
+      no: {
+        action: {
+          title: "Investigate hidden stressors",
+          items: [
+            "Check for subtle water chemistry issues",
+            "Review management timing and intensity",
+            "Assess whether disturbance is affecting sensitive microsites",
+            "Consult fen ecology specialists"
+          ]
+        },
+        next: "s_assisted"
+      }
+    },
+    s_nearby: {
+      q: "Are source populations of target species available nearby?",
+      hint: "Within 1–5 km is ideal for natural dispersal. Landscape connectivity maps can help identify sources.",
+      yes: "s_connectivity",
+      no:  "s_assisted"
+    },
+    s_connectivity: {
+      q: "Is habitat connectivity sufficient for natural dispersal?",
+      hint: "Many fen specialists disperse poorly. Ditches, roads, and intensive farmland can act as barriers.",
+      yes: {
+        action: {
+          title: "Support natural dispersal",
+          items: [
+            "Maintain or restore habitat corridors between fen patches",
+            "Allow natural colonisation time (5–20 years after conditions improve)",
+            "Monitor for spontaneous colonisation of target species",
+            "Avoid unnecessary disturbance to newly colonising populations"
+          ]
+        },
+        next: "s_timing"
+      },
+      no: {
+        action: {
+          title: "Improve connectivity",
+          items: [
+            "Map potential corridor routes between fen sites",
+            "Work with neighbouring landowners on corridor creation",
+            "Consider stepping stone habitats",
+            "If connectivity cannot be improved, consider assisted colonisation"
+          ]
+        },
+        next: "s_timing"
+      }
+    },
+    s_assisted: {
+      q: "Is assisted colonisation or species reintroduction appropriate?",
+      hint: "Only introduce species when environmental conditions (hydrology, chemistry, nutrients) are already suitable.",
+      warning: "Common mistake: Reintroducing species too early. Species fail if hydrology and nutrients remain unsuitable — fix conditions first.",
+      yes: {
+        action: {
+          title: "Phased reintroduction programme",
+          items: [
+            "Only proceed after hydrology, chemistry, and nutrients are stable",
+            "Use locally sourced or genetically appropriate donor material",
+            "Transfer green hay, moss, or plug plants from nearby donor sites",
+            "Prioritise bryophytes and sedges — not just charismatic vascular plants",
+            "Monitor establishment and adjust methods"
+          ]
+        },
+        next: "s_timing"
+      },
+      no: {
+        action: {
+          title: "Accept altered ecological trajectory",
+          items: [
+            "Some historical species may not return",
+            "Focus on achieving a functioning, self-sustaining fen community",
+            "Document what is present and set realistic targets",
+            "Revisit reintroduction potential as conditions improve"
+          ]
+        },
+        next: "s_timing"
+      }
+    },
+    s_timing: {
+      q: "Have conditions been stable for long enough for species recovery to begin?",
+      hint: "Most fen specialists need 5–15 years of stable conditions before meaningful recovery is apparent.",
+      warning: "Common mistake: Expecting full historical recovery. Some changes may be irreversible — set realistic expectations and measure progress incrementally.",
+      yes: "__phase_end__",
+      no: {
+        action: {
+          title: "Species recovery is a long-term process",
+          items: [
+            "Continue improving and stabilising conditions",
+            "Document baseline species presence now",
+            "Set 5, 10, and 20-year monitoring benchmarks",
+            "Avoid management changes while recovery is underway"
+          ]
+        },
+        next: "__phase_end__"
+      }
+    }
+  },
+
+  // ── 6. RESILIENCE ────────────────────────────────────────────────────────
+  resilience: {
+    r1: {
+      q: "Can the fen retain adequate water during prolonged drought?",
+      hint: "Climate projections suggest longer, hotter summers. Test whether the fen can maintain saturation during a 6–8 week dry spell.",
+      urgent: "Key question: Can the fen survive hotter summers? Will groundwater recharge decline under future climate?",
+      warning: "Common mistake: Restoring to historical conditions that no longer exist. Future climate may require higher water table targets than historical records suggest.",
+      yes: "r_recharge",
+      no:  "r_retention"
+    },
+    r_retention: {
+      q: "Can water retention capacity be increased through design changes?",
+      hint: "Raising outlet levels, creating storage features, or modifying the catchment may increase drought resilience.",
+      yes: {
+        action: {
+          title: "Hydrological redesign for climate resilience",
+          items: [
+            "Raise water table targets above historical levels if needed",
+            "Create additional water storage features",
+            "Reduce evapotranspiration losses where possible",
+            "Model future climate scenarios to set appropriate targets"
+          ]
+        },
+        next: "r_recharge"
+      },
+      no: {
+        action: {
+          title: "Long-term vulnerability — adaptation needed",
+          items: [
+            "Accept that site may not be fully restorable under future climate",
+            "Prioritise most drought-resilient areas of the fen",
+            "Identify drought refugia and protect them",
+            "Set adjusted restoration targets and communicate uncertainty"
+          ]
+        },
+        next: "r_recharge"
+      }
+    },
+    r_recharge: {
+      q: "Is groundwater recharge to the fen declining over time?",
+      hint: "Review long-term water level records. Declining trends suggest recharge reduction from land-use change or climate.",
+      yes: {
+        action: {
+          title: "Catchment-scale adaptation",
+          items: [
+            "Map recharge zones and investigate causes of decline",
+            "Engage with land managers in the catchment",
+            "Explore water-holding land management in the recharge area",
+            "Consider supplementary water supply options"
+          ]
+        },
+        next: "r_peat_decomp"
+      },
+      no: "r_peat_decomp"
+    },
+    r_peat_decomp: {
+      q: "Is peat decomposition accelerating (subsidence, bulk density increase, CO₂ flux)?",
+      hint: "Accelerating decomposition may indicate water table instability or drought stress not yet visible in vegetation.",
+      yes: {
+        action: {
+          title: "Reassess water table stability",
+          items: [
+            "Investigate whether water table is lower than restoration targets",
+            "Check for seasonal droughts not captured in monitoring averages",
+            "Increase monitoring frequency during dry periods",
+            "Consider raising water control structure levels"
+          ]
+        },
+        next: "r_governance"
+      },
+      no: "r_governance"
+    },
+    r_governance: {
+      q: "Is long-term governance, monitoring, and funding secured for at least 20 years?",
+      hint: "Fen restoration requires decades of stewardship. Short funding cycles are a major cause of restoration failure.",
+      warning: "Common mistake: Short-term funding horizons. Many rewetted fens fail during extreme summers or after management stops — secure long-term commitments.",
+      yes: {
+        action: {
+          title: "Implement long-term adaptive monitoring",
+          items: [
+            "Establish a monitoring protocol reviewed every 5 years",
+            "Define clear trigger thresholds for management interventions",
+            "Document all decisions, conditions, and outcomes",
+            "Build institutional knowledge so restoration continues through staff changes"
+          ]
+        },
+        next: "__phase_end__"
+      },
+      no: {
+        action: {
+          title: "Management continuity at risk",
+          items: [
+            "Develop a long-term stewardship plan now",
+            "Explore legal covenants or conservation easements",
+            "Engage partner organisations or national agencies",
+            "Without this, all restoration investment is at risk"
+          ]
+        },
+        next: "__phase_end__"
+      }
+    }
+  }
+};
+
+// Start nodes for each phase
+var PHASE_STARTS = {
+  hydrology:  'h1',
+  chemistry:  'c1',
+  nutrients:  'n1',
+  management: 'm1',
+  species:    's1',
+  resilience: 'r1'
+};
+
+// ── State ─────────────────────────────────────────────────────────────────────
+var state = {
+  phase: 0,         // current phase index
+  node: null,       // current node key
+  history: [],      // [{phase, node, answer, short}]
+  phaseNotes: {},   // phase index → array of note strings
+  done: false
+};
+
+function currentPhaseId() { return PHASES[state.phase].id; }
+function currentTree()    { return TREES[currentPhaseId()]; }
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function shortQ(q) {
+  return q.length > 45 ? q.substring(0, 45) + '…' : q;
+}
+
+function recordNote(text) {
+  if (!state.phaseNotes[state.phase]) state.phaseNotes[state.phase] = [];
+  state.phaseNotes[state.phase].push(text);
+}
+
+// ── Render phase tiles ────────────────────────────────────────────────────────
+function renderPhases() {
+  var tilesEl   = document.getElementById('fenw-tiles');
+  var progressEl = document.getElementById('fenw-progress');
+
+  tilesEl.innerHTML = PHASES.map(function(p, i) {
+    var cls = 'fenw__tile';
+    if (i < state.phase)  cls += ' done';
+    if (i === state.phase) cls += ' active';
+
+    var imgContent = p.img
+      ? '<img src="' + p.img + '" alt="' + p.label + '">'
+      : '<span class="fenw__tile-icon">' + p.icon + '</span>';
+
+    return '<button class="' + cls + '" onclick="fenwJumpToPhase(' + i + ')" title="Jump to phase ' + (i+1) + ': ' + p.label + '">' +
+      '<div class="fenw__tile-img">' + imgContent + '</div>' +
+      '<span class="fenw__tile-label">' + p.num + '. ' + p.label + '</span>' +
+      '</button>';
+  }).join('');
+
+  var pct = state.done ? 100 : Math.round((state.phase / PHASES.length) * 100);
+  progressEl.style.width = pct + '%';
+
+  var titleEl = document.getElementById('fenw-phase-title');
+  if (!state.done) {
+    titleEl.textContent = 'Phase ' + PHASES[state.phase].num + ' — ' + PHASES[state.phase].label;
+  }
+}
+
+// ── Render breadcrumb ─────────────────────────────────────────────────────────
+function renderBreadcrumb() {
+  var phaseHistory = state.history.filter(function(h) {
+    return h.phase === state.phase;
+  });
+  document.getElementById('fenw-breadcrumb').innerHTML =
+    phaseHistory.map(function(h) {
+      return '<span class="fenw__crumb fenw__crumb--' + h.answer + '">' +
+        h.short + ' → ' + h.answer + '</span>';
+    }).join('');
+}
+
+// ── Render main content ───────────────────────────────────────────────────────
+function render() {
+  if (state.done) { renderSummary(); return; }
+
+  renderPhases();
+  renderBreadcrumb();
+
+  var tree = currentTree();
+  var node = tree[state.node];
+  var content = document.getElementById('fenw-content');
+
+  if (!node) { advancePhase(); return; }
+
+  // Action node
+  if (node.action) {
+    content.innerHTML = renderActionBox(node.action, node.next);
+    return;
+  }
+
+  // Result / blocking node
+  if (node.result) {
+    content.innerHTML = renderBlockingResult(node);
+    return;
+  }
+
+  // Question node
+  var html = '<div class="fenw__card">';
+
+  if (node.urgent) {
+    html += '<div class="fenw__urgent"><strong>Key question</strong>' + node.urgent + '</div>';
+  }
+
+  html += '<p class="fenw__question">' + node.q + '</p>';
+
+  if (node.hint) {
+    html += '<p class="fenw__hint">' + node.hint + '</p>';
+  }
+
+  if (node.warning) {
+    html += '<div class="fenw__warning"><strong>Common mistake</strong>' + node.warning + '</div>';
+  }
+
+  html += '<div class="fenw__actions">' +
+    '<button class="fenw__btn fenw__btn--yes" onclick="fenwAnswer(true)">Yes</button>' +
+    '<button class="fenw__btn fenw__btn--no"  onclick="fenwAnswer(false)">No</button>';
+
+  if (state.history.filter(function(h){ return h.phase === state.phase; }).length > 0) {
+    html += '<button class="fenw__btn fenw__btn--ghost" onclick="fenwBack()">← Back</button>';
+  }
+
+  html += '</div></div>';
+  content.innerHTML = html;
+}
+
+function renderActionBox(action, next) {
+  var html = '<div class="fenw__action-box">' +
+    '<h4>' + action.title + '</h4>' +
+    '<ul>' + action.items.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul>' +
+    '</div>' +
+    '<div style="margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;">';
+
+  if (next === '__phase_end__') {
+    if (state.phase < PHASES.length - 1) {
+      html += '<button class="fenw__btn fenw__btn--yes" onclick="fenwNextPhase()">Next phase →</button>';
+    } else {
+      html += '<button class="fenw__btn fenw__btn--yes" onclick="fenwFinish()">See summary →</button>';
+    }
+  } else {
+    html += '<button class="fenw__btn fenw__btn--yes" onclick="fenwContinue(\'' + next + '\')">Continue →</button>';
+  }
+
+  html += '<button class="fenw__btn fenw__btn--ghost" onclick="fenwBack()">← Back</button>';
+  html += '</div>';
+  return html;
+}
+
+function renderBlockingResult(node) {
+  return '<div class="fenw__action-box">' +
+    '<h4>' + node.result + '</h4>' +
+    '<p style="font-size:0.85rem;line-height:1.6;color:var(--bog-ink,#233d35)">' + node.desc + '</p>' +
+    '</div>' +
+    '<div style="margin-top:0.75rem">' +
+    '<button class="fenw__btn fenw__btn--ghost" onclick="fenwBack()">← Back</button>' +
+    '</div>';
+}
+
+// ── Summary ───────────────────────────────────────────────────────────────────
+function renderSummary() {
+  renderPhases();
+  document.getElementById('fenw-breadcrumb').innerHTML = '';
+
+  var noCount = state.history.filter(function(h){ return h.answer === 'no'; }).length;
+  var totalQ  = state.history.length;
+
+  var html = '<div class="fenw__summary">' +
+    '<div class="fenw__summary-title">Restoration pathway summary</div>';
+
+  // Per-phase notes
+  PHASES.forEach(function(p, i) {
+    var notes = state.phaseNotes[i];
+    html += '<div class="fenw__phase-summary">' +
+      '<h4>Phase ' + (i+1) + ' — ' + p.label.replace(/^\d+ — /, '') + '</h4>';
+
+    if (notes && notes.length > 0) {
+      html += '<p>' + notes.join(' · ') + '</p>';
+    } else {
+      html += '<p style="color:var(--muted,#4a6b5e)">No critical issues identified in this phase.</p>';
+    }
+    html += '</div>';
+  });
+
+  // Overall priority
+  var urgency = noCount > 6 ? 'critical' : noCount > 3 ? 'important' : 'monitor';
+  var urgencyText = noCount > 6
+    ? 'Multiple critical barriers identified — extensive restoration work needed across all phases.'
+    : noCount > 3
+    ? 'Several restoration challenges identified — prioritise hydrology and chemistry first.'
+    : 'Conditions are relatively favourable — focus on management and long-term monitoring.';
+
+  html += '<div class="fenw__priority">' +
+    '<div class="fenw__priority-item ' + urgency + '">' +
+    '<div class="fenw__priority-badge">' + (noCount > 6 ? 'Critical' : noCount > 3 ? 'Important' : 'Monitoring') + '</div>' +
+    '<div>' + urgencyText + '</div>' +
+    '</div></div>';
+
+  html += '<div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">' +
+    '<button class="fenw__btn fenw__btn--ghost" onclick="fenwReset()">Start over</button>' +
+    '</div>' +
+    '</div>';
+
+  document.getElementById('fenw-content').innerHTML = html;
+  document.getElementById('fenw-phase-title').textContent = 'Assessment complete';
+}
+
+// ── Actions ───────────────────────────────────────────────────────────────────
+window.fenwAnswer = function(yes) {
+  var tree = currentTree();
+  var node = tree[state.node];
+  var answer = yes ? 'yes' : 'no';
+  var next = yes ? node.yes : node.no;
+
+  state.history.push({
+    phase: state.phase,
+    node: state.node,
+    answer: answer,
+    short: shortQ(node.q)
+  });
+
+  // Record notes for summary
+  if (!yes && node.warning) {
+    recordNote('⚠ ' + node.warning.substring(0, 80) + '…');
+  }
+
+  processNext(next);
+};
+
+window.fenwContinue = function(nextKey) {
+  state.history.push({
+    phase: state.phase,
+    node: state.node,
+    answer: 'continue',
+    short: '(actions noted)'
+  });
+  state.node = nextKey;
+  if (nextKey === '__phase_end__') {
+    advancePhase();
+  } else {
+    render();
+  }
+};
+
+window.fenwNextPhase = function() {
+  advancePhase();
+};
+
+window.fenwFinish = function() {
+  state.done = true;
+  render();
+};
+
+window.fenwBack = function() {
+  if (state.history.length === 0) return;
+  var prev = state.history.pop();
+
+  // Restore phase if needed
+  if (prev.phase !== state.phase) {
+    state.phase = prev.phase;
+    // Remove any phase notes added after this point
+    for (var i = state.phase + 1; i < PHASES.length; i++) {
+      delete state.phaseNotes[i];
+    }
+  }
+
+  state.node = prev.node;
+  state.done = false;
+  render();
+};
+
+
+window.fenwJumpToPhase = function(i) {
+  state.phase = i;
+  state.node  = PHASE_STARTS[PHASES[i].id];
+  state.done  = false;
+  // Clear history for this phase onwards
+  state.history = state.history.filter(function(h) { return h.phase < i; });
+  for (var j = i; j < PHASES.length; j++) { delete state.phaseNotes[j]; }
+  render();
+};
+
+window.fenwReset = function() {
+  state.phase = 0;
+  state.node  = PHASE_STARTS[PHASES[0].id];
+  state.history = [];
+  state.phaseNotes = {};
+  state.done = false;
+  render();
+};
+
+function processNext(next) {
+  if (typeof next === 'string') {
+    if (next === '__phase_end__') {
+      advancePhase();
+    } else {
+      state.node = next;
+      render();
+    }
+  } else if (next && next.action) {
+    // Inline action node
+    var key = '__action__' + Date.now();
+    currentTree()[key] = next;
+    state.node = key;
+    render();
+  } else if (next && next.result) {
+    var key2 = '__result__' + Date.now();
+    currentTree()[key2] = next;
+    state.node = key2;
+    render();
+  }
+}
+
+function advancePhase() {
+  if (state.phase < PHASES.length - 1) {
+    state.phase++;
+    state.node = PHASE_STARTS[PHASES[state.phase].id];
+    render();
+  } else {
+    state.done = true;
+    render();
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+state.node = PHASE_STARTS[PHASES[0].id];
+render();
+
+})();
+</script>
