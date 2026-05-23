@@ -1,0 +1,85 @@
+<style>
+.fw{font-family:var(--ff-sans,'Source Sans 3',sans-serif);margin:var(--sp-lg,2rem) 0}
+.fw__card{background:var(--bloom,#F6FFF8);border:1px solid var(--fen,#CCE3DE);border-radius:8px;padding:1.25rem;display:flex;flex-direction:column;gap:1rem}
+.fw__q{font-size:clamp(.9rem,1.8vw,1rem);font-weight:500;color:var(--deep-forest,#1a2e28);line-height:1.55;margin:0}
+.fw__actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.fw__btn{flex:1;min-width:90px;padding:9px 18px;border-radius:4px;border:none;font-family:var(--ff-sans,'Source Sans 3',sans-serif);font-size:.875rem;font-weight:600;cursor:pointer;transition:background .2s}
+.fw__btn--yes{background:var(--sedge,#6B9080);color:var(--bloom,#F6FFF8)}
+.fw__btn--yes:hover{background:var(--deep-sedge,#3d6355)}
+.fw__btn--no{background:#8B2635;color:#F6FFF8}
+.fw__btn--no:hover{background:#6B1428}
+.fw__btn--ghost{flex:0;background:transparent;color:var(--muted,#4a6b5e);border:1px solid var(--fen,#CCE3DE);padding:7px 14px;font-size:.8rem;min-width:auto}
+.fw__btn--ghost:hover{background:var(--mist,#EAF4F4)}
+.fw__result{background:var(--mist,#EAF4F4);border:1.5px solid var(--sedge,#6B9080);border-radius:8px;padding:1.25rem;animation:fwFade .3s ease}
+@keyframes fwFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.fw__result-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sedge,#6B9080);margin-bottom:.5rem}
+.fw__result-body{font-size:.85rem;line-height:1.7;color:var(--bog-ink,#233d35)}
+.fw__result-body ul{margin:.25rem 0 .25rem 1.25rem;padding:0}
+.fw__result-body li{margin-bottom:.2rem}
+.fw__result-body b{color:var(--deep-forest,#1a2e28)}
+.fw__result-body i{color:var(--muted,#4a6b5e)}
+.fw__goto{display:inline-block;margin-top:.75rem;padding:7px 16px;background:var(--sedge,#6B9080);color:#F6FFF8;border-radius:4px;font-size:.8rem;font-weight:600;text-decoration:none;border-bottom:none}
+.fw__goto:hover{background:var(--deep-sedge,#3d6355);color:#F6FFF8;border-bottom:none}
+.fw__crumbs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.5rem;min-height:18px}
+.fw__crumb{font-size:.68rem;padding:2px 8px;border-radius:10px}
+.fw__crumb--yes{background:#d4e8e1;color:#2d5a4a}
+.fw__crumb--no{background:#f0d0d4;color:#6B1428}
+</style>
+
+<div class="fw" id="fw-s1">
+  <div class="fw__crumbs" id="fw-s1-crumbs"></div>
+  <div id="fw-s1-content"></div>
+</div>
+
+<script>
+(function(){
+var R1='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>CAP Natura 2000 compensation* <i>(*Forestry eligible only here)</i>, eco-schemes, AECMs, INVEST interventions <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Natura 2000 management plans<br><br><b>Private supplementary funds:</b><ul><li><i>potentially</i> Carbon Removal Carbon Farming Certification</li><li>InvestEU Programme</li></ul>';
+var R2='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Natura 2000 management plans<br><br><b>Private supplementary funds:</b><ul><li><i>potentially</i> Carbon Removal Carbon Farming Certification</li><li>InvestEU Programme</li></ul>';
+var R3='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>CAP Natura 2000 compensation (Natura 2000 sites only), eco-schemes, AECMs, INVEST interventions <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Natura 2000 management plans<br><br><b>Private supplementary funds:</b><ul><li>InvestEU Programme</li></ul>';
+var R4='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Natura 2000 management plans<br><br><b>Private supplementary funds:</b><ul><li>InvestEU Programme</li></ul>';
+
+var TREE={
+  Q1:{q:'Is peatland restoration identified as a recommended or priority measure in the Natura 2000 management plan or any local, regional, or national law?',yes:'Q2',no:'Q4'},
+  Q2:{q:'Does your planned restoration exceed the minimum legal requirements?',yes:'Q3a',no:'Q5a'},
+  Q3a:{q:'Is your peatland site under agricultural or forestry use and eligible to CAP payments?',yes:{r:R1},no:{r:R2}},
+  Q4:{q:'Is restoration identified as a recommended or priority measure in the Natura 2000 management plan?',yes:'Q3a',no:'__sec4__'},
+  Q5a:{q:'Is your peatland site under agricultural or forestry use and eligible to CAP payments?',yes:{r:R3},no:{r:R4}}
+};
+
+var hist=[];
+var cur='Q1';
+var content=document.getElementById('fw-s1-content');
+var crumbs=document.getElementById('fw-s1-crumbs');
+
+function shortQ(q){return q.length>50?q.substring(0,50)+'…':q;}
+
+function render(){
+  crumbs.innerHTML=hist.map(function(h){return'<span class="fw__crumb fw__crumb--'+h.a+'">'+h.s+' → '+h.a+'</span>';}).join('');
+  if(cur==='__sec4__'){
+    content.innerHTML='<div class="fw__result"><div class="fw__result-label">Next step</div><div class="fw__result-body">Your site does not meet the criteria for Natura 2000 funding pathways under this section.<br><br><a class="fw__goto" href="#321-section-1-natura-2000-network">Go to Section 4 — Other scenarios →</a></div></div><div style="margin-top:.75rem"><button class="fw__btn fw__btn--ghost" onclick="fwS1Back()">← Back</button></div>';
+    return;
+  }
+  var node=TREE[cur];
+  if(node.r!==undefined){
+    content.innerHTML='<div class="fw__result"><div class="fw__result-label">Relevant funding instruments</div><div class="fw__result-body">'+node.r+'</div></div><div style="margin-top:.75rem"><button class="fw__btn fw__btn--ghost" onclick="fwS1Back()">← Back</button>&nbsp;<button class="fw__btn fw__btn--ghost" onclick="fwS1Reset()">Start over</button></div>';
+    return;
+  }
+  content.innerHTML='<div class="fw__card"><p class="fw__q">'+node.q+'</p><div class="fw__actions"><button class="fw__btn fw__btn--yes" onclick="fwS1Ans(true)">Yes</button><button class="fw__btn fw__btn--no" onclick="fwS1Ans(false)">No</button>'+(hist.length>0?'<button class="fw__btn fw__btn--ghost" onclick="fwS1Back()">← Back</button>':'')+'</div></div>';
+}
+
+window.fwS1Ans=function(yes){
+  var node=TREE[cur];
+  hist.push({from:cur,a:yes?'yes':'no',s:shortQ(node.q)});
+  var next=yes?node.yes:node.no;
+  if(typeof next==='string'){cur=next;}
+  else{var k='__r__'+Date.now();TREE[k]=next;cur=k;}
+  render();
+};
+window.fwS1Back=function(){
+  if(!hist.length)return;
+  cur=hist.pop().from;render();
+};
+window.fwS1Reset=function(){hist=[];cur='Q1';render();};
+render();
+})();
+</script>

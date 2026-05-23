@@ -1,0 +1,43 @@
+<div class="fw" id="fw-s21">
+  <div class="fw__crumbs" id="fw-s21-crumbs"></div>
+  <div id="fw-s21-content"></div>
+</div>
+
+<script>
+(function(){
+var R1='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>CAP Natura 2000 compensation* (Natura 2000 sites only; *Forestry eligible only here), eco-schemes, AECMs, INVEST interventions <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Restoration Plans<br><br><b>Private supplementary funds:</b><ul><li><i>potentially</i> Carbon Removal Carbon Farming Certification</li><li>InvestEU Programme</li></ul>';
+var R2='<b>Public EU funds:</b><ul><li>LIFE Programme <i>[core funding]</i></li><li>Cohesion policy funds (ERDF, CF, JTF) <i>[core funding]</i></li><li>Recovery and Resilience Facility <i>[supplementary funding]</i></li></ul><b>Public National funds:</b> check National Restoration Plans<br><br><b>Private supplementary funds:</b><ul><li><i>potentially</i> Carbon Removal Carbon Farming Certification</li><li>InvestEU Programme</li></ul>';
+var R3='<b>Public EU funds:</b><ul><li>LIFE Programme</li><li>CAP Natura 2000 compensation*, eco-schemes, AECMs, INVEST interventions <i>(*Forestry eligible only here)</i></li><li>Cohesion policy funds (ERDF, CF, JTF)</li><li>Recovery and Resilience Facility</li></ul><b>Public National funds:</b> check National Restoration Plans<br><br><b>Private supplementary funds:</b><ul><li>InvestEU Programme</li></ul>';
+var R4='<b>Public EU funds:</b><ul><li>LIFE Programme</li><li>Cohesion policy funds (ERDF, CF, JTF)</li><li>Recovery and Resilience Facility</li></ul><b>Public National funds:</b> check National Restoration Plans<br><br><b>Private supplementary funds:</b><ul><li>InvestEU Programme</li></ul>';
+
+var TREE={
+  Q1:{q:'Are you legally required, under national, regional or local law, to restore your peatland as part of your Member State\'s implementation of Article 4 of the Nature Restoration Regulation?',yes:'Q2',no:'Q4'},
+  Q2:{q:'Does your planned restoration exceed the minimum legal requirements?',yes:'Q3a',no:'Q5a'},
+  Q3a:{q:'Is your peatland site under agricultural or forestry use and eligible to CAP payments?',yes:{r:R1},no:{r:R2}},
+  Q4:{q:'Is peatland restoration or rewetting identified or recommended in the National Restoration Plan of your Member State?',yes:'Q3a',no:'__sec4__'},
+  Q5a:{q:'Is your peatland site under agricultural or forestry use and eligible to CAP payments?',yes:{r:R3},no:{r:R4}}
+};
+
+var hist=[],cur='Q1';
+var content=document.getElementById('fw-s21-content');
+var crumbs=document.getElementById('fw-s21-crumbs');
+function shortQ(q){return q.length>50?q.substring(0,50)+'…':q;}
+function render(){
+  crumbs.innerHTML=hist.map(function(h){return'<span class="fw__crumb fw__crumb--'+h.a+'">'+h.s+' → '+h.a+'</span>';}).join('');
+  if(cur==='__sec4__'){
+    content.innerHTML='<div class="fw__result"><div class="fw__result-label">Next step</div><div class="fw__result-body">Your site does not meet the criteria for NRR Article 4 funding pathways.<br><br><a class="fw__goto" href="#325-section-4-other-scenarios">Go to Section 4 — Other scenarios →</a></div></div><div style="margin-top:.75rem"><button class="fw__btn fw__btn--ghost" onclick="fwS21Back()">← Back</button></div>';
+    return;
+  }
+  var node=TREE[cur];
+  if(node.r!==undefined){
+    content.innerHTML='<div class="fw__result"><div class="fw__result-label">Relevant funding instruments</div><div class="fw__result-body">'+node.r+'</div></div><div style="margin-top:.75rem"><button class="fw__btn fw__btn--ghost" onclick="fwS21Back()">← Back</button>&nbsp;<button class="fw__btn fw__btn--ghost" onclick="fwS21Reset()">Start over</button></div>';
+    return;
+  }
+  content.innerHTML='<div class="fw__card"><p class="fw__q">'+node.q+'</p><div class="fw__actions"><button class="fw__btn fw__btn--yes" onclick="fwS21Ans(true)">Yes</button><button class="fw__btn fw__btn--no" onclick="fwS21Ans(false)">No</button>'+(hist.length>0?'<button class="fw__btn fw__btn--ghost" onclick="fwS21Back()">← Back</button>':'')+'</div></div>';
+}
+window.fwS21Ans=function(yes){var node=TREE[cur];hist.push({from:cur,a:yes?'yes':'no',s:shortQ(node.q)});var next=yes?node.yes:node.no;if(typeof next==='string'){cur=next;}else{var k='__r__'+Date.now();TREE[k]=next;cur=k;}render();};
+window.fwS21Back=function(){if(!hist.length)return;cur=hist.pop().from;render();};
+window.fwS21Reset=function(){hist=[];cur='Q1';render();};
+render();
+})();
+</script>

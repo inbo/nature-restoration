@@ -1,0 +1,33 @@
+<div class="fw" id="fw-s4">
+  <div class="fw__crumbs" id="fw-s4-crumbs"></div>
+  <div id="fw-s4-content"></div>
+</div>
+
+<script>
+(function(){
+var R1='<b>Public EU core funds:</b><ul><li>CAP eco-schemes, AECMs, INVEST interventions</li></ul>';
+var R2='<b>Public EU supplementary funds:</b><ul><li>Cohesion policy funds (ERDF, CF, JTF)</li><li>Recovery and Resilience Facility</li><li>LIFE Programme</li></ul><b>Public National funds:</b> check <a href="https://lifemultipeat.eu/peatland-policy-portal/" target="_blank" rel="noopener">Peatland Policy Portal</a><br><br><b>Private funds:</b><ul><li><i>potentially</i> Carbon Removal Carbon Farming Certification <i>[core funding]</i></li><li>InvestEU Programme <i>[supplementary funding]</i></li></ul>';
+
+var TREE={
+  Q1:{q:'Is your peatland site under agricultural use and eligible to CAP payments?',yes:{r:R1+R2},no:{r:R2}}
+};
+
+var hist=[],cur='Q1';
+var content=document.getElementById('fw-s4-content');
+var crumbs=document.getElementById('fw-s4-crumbs');
+function shortQ(q){return q.length>50?q.substring(0,50)+'…':q;}
+function render(){
+  crumbs.innerHTML=hist.map(function(h){return'<span class="fw__crumb fw__crumb--'+h.a+'">'+h.s+' → '+h.a+'</span>';}).join('');
+  var node=TREE[cur];
+  if(node.r!==undefined){
+    content.innerHTML='<div class="fw__result"><div class="fw__result-label">Relevant funding instruments</div><div class="fw__result-body">'+node.r+'</div></div><div style="margin-top:.75rem"><button class="fw__btn fw__btn--ghost" onclick="fwS4Back()">← Back</button>&nbsp;<button class="fw__btn fw__btn--ghost" onclick="fwS4Reset()">Start over</button></div>';
+    return;
+  }
+  content.innerHTML='<div class="fw__card"><p class="fw__q">'+node.q+'</p><div class="fw__actions"><button class="fw__btn fw__btn--yes" onclick="fwS4Ans(true)">Yes</button><button class="fw__btn fw__btn--no" onclick="fwS4Ans(false)">No</button>'+(hist.length>0?'<button class="fw__btn fw__btn--ghost" onclick="fwS4Back()">← Back</button>':'')+'</div></div>';
+}
+window.fwS4Ans=function(yes){var node=TREE[cur];hist.push({from:cur,a:yes?'yes':'no',s:shortQ(node.q)});var next=yes?node.yes:node.no;if(typeof next==='string'){cur=next;}else{var k='__r__'+Date.now();TREE[k]=next;cur=k;}render();};
+window.fwS4Back=function(){if(!hist.length)return;cur=hist.pop().from;render();};
+window.fwS4Reset=function(){hist=[];cur='Q1';render();};
+render();
+})();
+</script>
