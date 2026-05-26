@@ -114,7 +114,7 @@ Monitoring is the basis for determining whether restoration targets have been re
 {% include figure.html src="/assets/images/monitoring_fluxes.jpg" caption="<strong>Figure 11.</strong> Greenhouse gas flux measurements in the Leiemeersen (Belgium).  &copy; Maud Raman, INBO" %}
 </div>
 
-Methods for data collection should be clearly outlined in the monitoring plan and follow standardized and systematic protocols to ensure quality assurance and standards are upheld throughout the data collection process. Having well-defined protocols can allow for easy training of monitoring responsibilities throughout the restoration project and help prevent against observation bias.<sup><a class="fnref" id="ref-20f-origin" href="#fn-20">[20]</a></sup>
+Methods for data collection should be clearly outlined in the monitoring plan and follow standardized and systematic protocols to ensure quality assurance and standards are upheld throughout the data collection process. Having well-defined protocols can allow for easy training of monitoring responsibilities throughout the restoration project and help prevent observation bias.<sup><a class="fnref" id="ref-20f-origin" href="#fn-20">[20]</a></sup>
 
 Equally important to well-defined protocols and training for data collection is developing an extensive data management plan to ensure the collected data can effectively support the evaluation process. A data management plan should cover file formats and structures, and outline file backup and data redundancy protocols.<sup><a class="fnref" id="ref-20g-origin" href="#fn-20">[20]</a></sup> Ensuring that data is collected and managed according to pre-established protocols will contribute to effective long-term project evaluation.
 
