@@ -148,4 +148,4 @@ Adaptive management is the process of evaluating information gained during monit
   <p>In the Kuivaniemi Lähteenaapa swamp restoration project (Finland), wet conditions prevented large machinery from accessing much of the site for restoration treatments (e.g., digging ditches, constructing dams). To offset the requirement for machinery, the construction of dams was done manually instead. Monitoring results indicated that the restoration trajectory was not proceeding as desired, so the practitioners entered the site in the winter, when the ground was frozen, to construct new, mechanically-built dams. This adaptive management resulted in improved restoration outcomes on-site.<sup><a class="fnref" id="ref-24b-origin" href="#fn-24">[24]</a></sup></p>
 </div>
 
-{% include references.html file="refs/refs_guidelines.html" %}
+{% include references.html file="refs/refs_monitoring.html" %}

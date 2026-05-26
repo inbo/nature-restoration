@@ -58,4 +58,4 @@ When evaluating the impact of **stressors**, it is important to consider that pe
   <p>The Von Post scale is a 10-step system for classifying peat decomposition, from H1 (completely undecomposed, intact plant structure) to H10 (fully decomposed, no identifiable plant structure). The test involves hand-squeezing a peat sample and observing the colour, turbidity, and texture of extruded water and the remaining material. As peat condition is generally a good indicator of peatland health, due to its interdependence with water and vegetation,<sup><a class="fnref" id="ref-16-origin" href="#fn-16">[16]</a></sup> the level of decomposition serves as a reliable proxy for peatland condition. For a simplified version of the Von-Post scale see Figure X.</p>
 </div>
 
-{% include references.html file="refs/refs_guidelines.html" %}
+{% include references.html file="refs/refs_assessment.html" %}

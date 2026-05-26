@@ -52,4 +52,4 @@ The restoration plan should be considered a living document that will change and
 ### Baseline monitoring
 The final step before restoration measures can begin is to conduct baseline monitoring. This provides a point of comparison, both for assessing pre-restoration conditions against the reference model and for comparing pre-restoration and post-restoration conditions. Having these comparisons is necessary for measuring the effectiveness of restoration and communicating project development to stakeholders. As pre-restoration conditions will be compared to post-restoration conditions, baseline monitoring should focus on measurable indicators which will determine if desired restoration outcomes have been achieved.<sup><a class="fnref" id="ref-4f-origin" href="#fn-4">[4]</a>,<a class="fnref" id="ref-1j-origin" href="#fn-1">[1]</a></sup> For guidance on monitoring design and parameter selection, see Section 2.5.
 
-{% include references.html file="refs/refs_guidelines.html" %}
+{% include references.html file="refs/refs_planning.html" %}
