@@ -25,7 +25,7 @@ Beyond the surface of fields, forests, and valleys lies a complex, living infras
     <a href="{{ '/landscape/wetlands/' | relative_url }}" class="btn">Learn more</a>
   </div>
   
-  <div class="card">
+  <!--<div class="card">
     <div class="card-image-wrapper">
       <img class="card-image" src="{{ '/assets/backgrounds/OudeDurme.jpg' | relative_url }}" alt="De Teut, Belgium">
       <span class="card-attribution">© Yves Adams, Vilda</span>
@@ -33,6 +33,6 @@ Beyond the surface of fields, forests, and valleys lies a complex, living infras
     <h3 class="card-title">Rivers and lakes</h3>
     <p class="card-excerpt">Restoring river and lake habitats.</p>
     <a href="{{ '/landscape/rivers-lakes/' | relative_url }}" class="btn">Learn more</a>
-  </div>
+  </div>-->
 
 </div>
