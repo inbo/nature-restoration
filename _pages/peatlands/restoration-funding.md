@@ -87,7 +87,7 @@ Until 2030, the Nature Restoration Regulation highlights that Member States shou
 **NRR Article 4 Diagnostic Wizard**
 
 This step-by-step diagnostic wizard evaluates your project's status against the legally binding timeline targets mandated by Article 4 of the Nature Restoration Regulation. It calculates whether your proposed works constitute a mandatory statutory requirement or an eligible voluntary extension, routing you to the corresponding public or private financing frameworks.
-{% include funding-wizard-s2-1.html %}
+{% include funding-wizard-s2-1.html caption="<strong>Figure 13.</strong> Decision support flowchart for peatland restoration within the European Union."%}
 
 ### 3.2.3 Section 2.2: Nature Restoration Regulation, Art. 11
 The Nature Restoration Regulation (NRR)<sup><a class="fnref" id="ref-4d-origin" href="#fn-4">[4]</a></sup>, adopted in 2024, aims at expanding the scope of restoration measures beyond Natura 2000 sites. The NRR sets legally binding targets that include all habitat types listed in Annex I of the Habitat Directive in poor or bad condition, from urban to marine or terrestrial ecosystems.
