@@ -580,3 +580,11 @@ html, body {
   sup a.fnref:hover {
     text-decoration: underline;
   }
+
+  .tooltip-term {
+    color: #1e4d2b;
+    font-weight: 700; /* This makes the tooltip term bold cleanly without markdown bugs */
+    border-bottom: 1px dotted #3a8c52;
+    cursor: help;
+    padding-bottom: 1px;
+  }

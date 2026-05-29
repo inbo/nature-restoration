@@ -6,7 +6,8 @@
     {% include tooltip.html term="Peat" definition="Soft, porous or compressed..." %}
 {% endcomment %}
 
+{%- comment -%} Inline safe tooltip include {%- endcomment -%}
 <span class="tooltip-wrap">
-  <span class="tooltip-term">{{ include.term }}</span>
-  <span class="tooltip-popup">{{ include.definition }}</span>
+<span class="tooltip-term">{{ include.term }}</span>
+<span class="tooltip-popup">{{ include.definition }}</span>
 </span>
