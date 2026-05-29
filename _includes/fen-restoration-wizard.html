@@ -459,13 +459,13 @@ var TREES = {
     h_extraction: {
       q: "Is groundwater extraction occurring nearby?",
       hint: "Check for agricultural pumping, water supply boreholes, or industrial abstraction within the catchment.",
-      warning: "Common mistake: Ignoring surrounding land use. Nearby pumping or drainage may continue degrading the fen even after on-site rewetting.",
+      warning: "Common mistake: Ignoring surrounding land use. Nearby pumping or drainage may continue degrading the peatland even after on-site rewetting.",
       yes: "h_extraction_summer",
       no:  "h_recharge"
     },
     h_extraction_summer: {
-      q: "Is extraction reducing summer groundwater levels at the fen?",
-      hint: "Compare water level records at the fen with extraction records. Summer correlation is key.",
+      q: "Is extraction reducing summer groundwater levels at the peatland?",
+      hint: "Compare water level records at the peatland with extraction records. Summer correlation is key.",
       yes: {
         action: {
           title: "Groundwater abstraction actions",
@@ -501,8 +501,8 @@ var TREES = {
     },
     h_fluctuate: {
       q: "Are seasonal water table fluctuations excessive (>40 cm seasonal drop)?",
-      hint: "Even if annual averages look acceptable, short summer droughts may still kill fen species.",
-      warning: "Common mistake: Measuring only average water levels. Short summer droughts may still kill fen species even if annual averages appear acceptable.",
+      hint: "Even if annual averages look acceptable, short summer droughts may still kill peatland species.",
+      warning: "Common mistake: Measuring only average water levels. Short summer droughts may still kill peatland species even if annual averages appear acceptable.",
       yes: "h_rapid_drain",
       no:  "h_oxidation"
     },
@@ -537,7 +537,7 @@ var TREES = {
     h_oxidation: {
       q: "Is peat oxidation still actively occurring?",
       hint: "Signs: dark crumbly peat, CO₂ emissions, peat surface subsidence, or peat bulk density increasing over time.",
-      warning: "Common mistake: Overflooding the site. Deep permanent flooding can convert fen into swamp or open water — target water table within 10–20 cm of surface, not deep inundation.",
+      warning: "Common mistake: Overflooding the site. Deep permanent flooding can convert peatland into swamp or open water — target water table within 10–20 cm of surface, not deep inundation.",
       yes: {
         action: {
           title: "Peat oxidation — urgent response",
@@ -559,8 +559,8 @@ var TREES = {
     c1: {
       q: "Is the incoming water nutrient-rich surface water (rivers, agricultural runoff)?",
       hint: "Check conductivity, phosphorus, and nitrate levels in incoming water. Agricultural catchments often have elevated nutrients.",
-      warning: "Common mistake: Assuming all water improves wetlands. Fen restoration requires specific water chemistry — not simply 'more water'.",
-      urgent: "Key question: Is incoming water nutrient-poor enough for the target fen type?",
+      warning: "Common mistake: Assuming all water improves wetlands. peatland restoration requires specific water chemistry — not simply 'more water'.",
+      urgent: "Key question: Is incoming water nutrient-poor enough for the target peatland type?",
       yes: "c_divert",
       no:  "c_polluted_gw"
     },
@@ -594,7 +594,7 @@ var TREES = {
     },
     c_polluted_gw: {
       q: "Is the groundwater polluted (nitrates, sulfates, heavy metals, pesticides)?",
-      hint: "Agricultural land nearby, landfills, or industrial sites may contaminate groundwater reaching the fen.",
+      hint: "Agricultural land nearby, landfills, or industrial sites may contaminate groundwater reaching the peatland.",
       yes: "c_source_id",
       no:  "c_phosphorus"
     },
@@ -627,7 +627,7 @@ var TREES = {
     },
     c_phosphorus: {
       q: "Are phosphorus concentrations elevated in peat water or incoming water?",
-      hint: "Target phosphorus <0.05 mg/L for species-rich fen recovery. Higher levels typically favour competitive vegetation.",
+      hint: "Target phosphorus <0.05 mg/L for species-rich peatland recovery. Higher levels typically favour competitive vegetation.",
       warning: "Common mistake: Ignoring phosphorus legacy. Old phosphorus stored in soils can continue leaking for decades after external sources are removed.",
       yes: "c_p_external",
       no:  "c_nitrogen"
@@ -641,7 +641,7 @@ var TREES = {
           title: "Stop external phosphorus loading first",
           items: [
             "Identify and stop all external phosphorus inputs",
-            "Install buffer zones between agricultural land and fen",
+            "Install buffer zones between agricultural land and peatland",
             "Divert phosphorus-rich inflows",
             "Without this step, restoration rarely succeeds"
           ]
@@ -665,7 +665,7 @@ var TREES = {
     c_nitrogen: {
       q: "Is nitrogen deposition or loading excessive?",
       hint: "High atmospheric N deposition (>10 kg N/ha/yr) is common near agricultural areas. Check national deposition maps.",
-      urgent: "Key question: Is nitrogen deposition overwhelming recovery? Even remote fens may remain nutrient-enriched from atmospheric deposition.",
+      urgent: "Key question: Is nitrogen deposition overwhelming recovery? Even remote peatlands may remain nutrient-enriched from atmospheric deposition.",
       yes: "c_n_compensate",
       no:  "c_ph"
     },
@@ -689,7 +689,7 @@ var TREES = {
           title: "Nitrogen limitation on biodiversity",
           items: [
             "Accept that biodiversity recovery may be limited",
-            "Focus restoration on nutrient-tolerant fen communities",
+            "Focus restoration on nutrient-tolerant peatland communities",
             "Advocate for reduced nitrogen emissions at policy level",
             "Maintain management to prevent further degradation"
           ]
@@ -698,18 +698,18 @@ var TREES = {
       }
     },
     c_ph: {
-      q: "Is the pH appropriate for the target fen type?",
-      hint: "Rich fens: pH 6–8. Poor fens: pH 4.5–6. Bogs: pH 3–4.5. Mismatched chemistry will prevent target species recovery.",
-      warning: "Common mistake: Misidentifying fen type. Acidic fens and calcareous fens require very different chemistry and management.",
+      q: "Is the pH appropriate for the target peatland type?",
+      hint: "Rich peatlands: pH 6–8. Poor peatlands: pH 4.5–6. Bogs: pH 3–4.5. Mismatched chemistry will prevent target species recovery.",
+      warning: "Common mistake: Misidentifying peatland type. Acidic peatlands and calcareous peatlands require very different chemistry and management.",
       yes: "__phase_end__",
       no: {
         action: {
           title: "Reassess restoration goals",
           items: [
-            "Re-evaluate the target fen type based on actual water chemistry",
+            "Re-evaluate the target peatland type based on actual water chemistry",
             "Consider whether the groundwater source can be changed",
             "Adjust species recovery targets to match actual chemistry",
-            "Consult with a fen ecologist to redefine realistic goals"
+            "Consult with a peatland ecologist to redefine realistic goals"
           ]
         },
         next: "__phase_end__"
@@ -721,7 +721,7 @@ var TREES = {
   nutrients: {
     n1: {
       q: "Is vegetation excessively productive (dense reeds, nettles, tall grasses)?",
-      hint: "High productivity indicates elevated nutrients. Compare with reference fen sites — productive monocultures are not a good sign.",
+      hint: "High productivity indicates elevated nutrients. Compare with reference peatland sites — productive monocultures are not a good sign.",
       urgent: "Key question: Are nutrients entering from surrounding land? Is phosphorus trapped in peat or sediments?",
       yes: "n_external",
       no:  "n_bryophytes"
@@ -745,7 +745,7 @@ var TREES = {
     },
     n_psoil: {
       q: "Is phosphorus stored in shallow peat or sediments (internal loading)?",
-      hint: "Internal phosphorus release often follows rewetting of oxidized peat. High iron-bound phosphorus is common in degraded fens.",
+      hint: "Internal phosphorus release often follows rewetting of oxidized peat. High iron-bound phosphorus is common in degraded peatlands.",
       yes: "n_topsoil",
       no: "n_bryophytes"
     },
@@ -780,8 +780,8 @@ var TREES = {
       }
     },
     n_bryophytes: {
-      q: "Are fen bryophytes (mosses) recovering or present?",
-      hint: "Sphagnum, brown mosses (Calliergon, Scorpidium), and other fen mosses are sensitive indicators of low-nutrient conditions.",
+      q: "Are peatland bryophytes (mosses) recovering or present?",
+      hint: "Sphagnum, brown mosses (Calliergon, Scorpidium), and other peatland mosses are sensitive indicators of low-nutrient conditions.",
       yes: "n_peat_acc",
       no: {
         action: {
@@ -818,16 +818,16 @@ var TREES = {
   // ── 4. MANAGEMENT ───────────────────────────────────────────────────────
   management: {
     m1: {
-      q: "Is scrub or woodland encroaching and suppressing fen vegetation?",
-      hint: "Willow, alder, birch, or invasive shrubs shading out fen specialists is a common degradation pathway.",
-      urgent: "Key question: Which management regime historically maintained this fen? Should grazing or mowing be used?",
+      q: "Is scrub or woodland encroaching and suppressing peatland vegetation?",
+      hint: "Willow, alder, birch, or invasive shrubs shading out peatland specialists is a common degradation pathway.",
+      urgent: "Key question: Which management regime historically maintained this peatland? Should grazing or mowing be used?",
       yes: "m_scrub_cause",
       no:  "m_litter"
     },
     m_scrub_cause: {
-      q: "Is the scrub encroachment primarily caused by drying of the fen?",
-      hint: "If the fen is drying out, scrub will return rapidly after removal unless hydrology is restored first.",
-      warning: "Common mistake: Removing scrub before restoring wetness. Scrub usually returns quickly if the fen remains dry.",
+      q: "Is the scrub encroachment primarily caused by drying of the peatland?",
+      hint: "If the peatland is drying out, scrub will return rapidly after removal unless hydrology is restored first.",
+      warning: "Common mistake: Removing scrub before restoring wetness. Scrub usually returns quickly if the peatland remains dry.",
       yes: {
         action: {
           title: "Restore hydrology before scrub removal",
@@ -846,14 +846,14 @@ var TREES = {
             "Remove scrub in phases to avoid disturbance shock",
             "Follow immediately with mowing or grazing to prevent regrowth",
             "Maintain open conditions through regular management",
-            "Monitor fen vegetation response"
+            "Monitor peatland vegetation response"
           ]
         },
         next: "m_litter"
       }
     },
     m_litter: {
-      q: "Is litter accumulation suppressing fen specialist species?",
+      q: "Is litter accumulation suppressing peatland specialist species?",
       hint: "Thick layers of dead plant material can smother low-growing mosses and specialist herbs.",
       yes: "m_mow_feasible",
       no:  "m_invasive"
@@ -870,7 +870,7 @@ var TREES = {
             "Remove all cut biomass from the site",
             "Avoid mowing during bird breeding season (typically April–July)",
             "Use low-ground-pressure machinery only",
-            "Monitor litter depth and fen specialist response"
+            "Monitor litter depth and peatland specialist response"
           ]
         },
         next: "m_invasive"
@@ -889,8 +889,8 @@ var TREES = {
       }
     },
     m_invasive: {
-      q: "Are invasive species spreading and threatening fen communities?",
-      hint: "Common fen invaders include Himalayan balsam, rhododendron, grey willow, or non-native grasses.",
+      q: "Are invasive species spreading and threatening peatland communities?",
+      hint: "Common peatland invaders include Himalayan balsam, rhododendron, grey willow, or non-native grasses.",
       yes: {
         action: {
           title: "Targeted invasive control",
@@ -907,8 +907,8 @@ var TREES = {
     },
     m_longterm: {
       q: "Is long-term management funding and governance secured?",
-      hint: "Fen restoration requires decades of continued management. Without secured funding, gains are easily reversed.",
-      warning: "Common mistake: Treating restoration as finished. Fen systems remain dynamic and vulnerable indefinitely — adaptive management must continue.",
+      hint: "Peatland restoration requires decades of continued management. Without secured funding, gains are easily reversed.",
+      warning: "Common mistake: Treating restoration as finished. Peatland systems remain dynamic and vulnerable indefinitely — adaptive management must continue.",
       yes: "__phase_end__",
       no: {
         action: {
@@ -928,7 +928,7 @@ var TREES = {
   // ── 5. SPECIES ──────────────────────────────────────────────────────────
   species: {
     s1: {
-      q: "Are remnant fen specialist species still present at the site?",
+      q: "Are remnant peatland specialist species still present at the site?",
       hint: "Look for characteristic sedges (Carex spp.), brown mosses, Sphagnum, rare orchids, or specialist invertebrates.",
       urgent: "Key question: Which species historically occurred here? Are viable seed banks still present?",
       yes: "s_stable",
@@ -956,7 +956,7 @@ var TREES = {
             "Check for subtle water chemistry issues",
             "Review management timing and intensity",
             "Assess whether disturbance is affecting sensitive microsites",
-            "Consult fen ecology specialists"
+            "Consult peatland ecology specialists"
           ]
         },
         next: "s_assisted"
@@ -970,12 +970,12 @@ var TREES = {
     },
     s_connectivity: {
       q: "Is habitat connectivity sufficient for natural dispersal?",
-      hint: "Many fen specialists disperse poorly. Ditches, roads, and intensive farmland can act as barriers.",
+      hint: "Many peatland specialists disperse poorly. Ditches, roads, and intensive farmland can act as barriers.",
       yes: {
         action: {
           title: "Support natural dispersal",
           items: [
-            "Maintain or restore habitat corridors between fen patches",
+            "Maintain or restore habitat corridors between peatland patches",
             "Allow natural colonisation time (5–20 years after conditions improve)",
             "Monitor for spontaneous colonisation of target species",
             "Avoid unnecessary disturbance to newly colonising populations"
@@ -987,7 +987,7 @@ var TREES = {
         action: {
           title: "Improve connectivity",
           items: [
-            "Map potential corridor routes between fen sites",
+            "Map potential corridor routes between peatland sites",
             "Work with neighbouring landowners on corridor creation",
             "Consider stepping stone habitats",
             "If connectivity cannot be improved, consider assisted colonisation"
@@ -1018,7 +1018,7 @@ var TREES = {
           title: "Accept altered ecological trajectory",
           items: [
             "Some historical species may not return",
-            "Focus on achieving a functioning, self-sustaining fen community",
+            "Focus on achieving a functioning, self-sustaining peatland community",
             "Document what is present and set realistic targets",
             "Revisit reintroduction potential as conditions improve"
           ]
@@ -1028,7 +1028,7 @@ var TREES = {
     },
     s_timing: {
       q: "Have conditions been stable for long enough for species recovery to begin?",
-      hint: "Most fen specialists need 5–15 years of stable conditions before meaningful recovery is apparent.",
+      hint: "Most peatland specialists need 5–15 years of stable conditions before meaningful recovery is apparent.",
       warning: "Common mistake: Expecting full historical recovery. Some changes may be irreversible — set realistic expectations and measure progress incrementally.",
       yes: "__phase_end__",
       no: {
@@ -1049,9 +1049,9 @@ var TREES = {
   // ── 6. RESILIENCE ────────────────────────────────────────────────────────
   resilience: {
     r1: {
-      q: "Can the fen retain adequate water during prolonged drought?",
-      hint: "Climate projections suggest longer, hotter summers. Test whether the fen can maintain saturation during a 6–8 week dry spell.",
-      urgent: "Key question: Can the fen survive hotter summers? Will groundwater recharge decline under future climate?",
+      q: "Can the peatland retain adequate water during prolonged drought?",
+      hint: "Climate projections suggest longer, hotter summers. Test whether the peatland can maintain saturation during a 6–8 week dry spell.",
+      urgent: "Key question: Can the peatland survive hotter summers? Will groundwater recharge decline under future climate?",
       warning: "Common mistake: Restoring to historical conditions that no longer exist. Future climate may require higher water table targets than historical records suggest.",
       yes: "r_recharge",
       no:  "r_retention"
@@ -1076,7 +1076,7 @@ var TREES = {
           title: "Long-term vulnerability — adaptation needed",
           items: [
             "Accept that site may not be fully restorable under future climate",
-            "Prioritise most drought-resilient areas of the fen",
+            "Prioritise most drought-resilient areas of the peatland",
             "Identify drought refugia and protect them",
             "Set adjusted restoration targets and communicate uncertainty"
           ]
@@ -1085,7 +1085,7 @@ var TREES = {
       }
     },
     r_recharge: {
-      q: "Is groundwater recharge to the fen declining over time?",
+      q: "Is groundwater recharge to the peatland declining over time?",
       hint: "Review long-term water level records. Declining trends suggest recharge reduction from land-use change or climate.",
       yes: {
         action: {
@@ -1120,8 +1120,8 @@ var TREES = {
     },
     r_governance: {
       q: "Is long-term governance, monitoring, and funding secured for at least 20 years?",
-      hint: "Fen restoration requires decades of stewardship. Short funding cycles are a major cause of restoration failure.",
-      warning: "Common mistake: Short-term funding horizons. Many rewetted fens fail during extreme summers or after management stops — secure long-term commitments.",
+      hint: "Peatland restoration requires decades of stewardship. Short funding cycles are a major cause of restoration failure.",
+      warning: "Common mistake: Short-term funding horizons. Many rewetted peatlands fail during extreme summers or after management stops — secure long-term commitments.",
       yes: {
         action: {
           title: "Implement long-term adaptive monitoring",
