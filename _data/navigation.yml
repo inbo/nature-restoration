@@ -17,10 +17,10 @@ main:
         url: /peatlands/monitoring-management/
       - title: Restoration funding
         url: /peatlands/restoration-funding/
-  - title: Landscape perspectives
-    url: /landscape/
-    children:
-      - title: Wetlands
-        url: /landscape/wetlands/
+  # -title: Landscape perspectives
+  #  url: /landscape/
+  #  children:
+  #    - title: Wetlands
+  #      url: /landscape/wetlands/
   - title: Key terms
     url: /keyterms/
