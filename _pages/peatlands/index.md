@@ -76,7 +76,7 @@ Peatlands may appear quiet and unassuming, yet they hold immense power in shapin
   </div>
 
 
-  <div class="card">
+<!--  <div class="card">
     <div class="card-image-wrapper">
       <img class="card-image" src="{{ '/assets/backgrounds/Buitengoor1.jpg' | relative_url }}" alt="Buitengoor, Belgium">
       <span class="card-attribution">© Yves Adams, Vilda</span>
@@ -84,7 +84,7 @@ Peatlands may appear quiet and unassuming, yet they hold immense power in shapin
     <h3 class="card-title">Best Practices</h3>
     <p class="card-excerpt">Practical approaches and lessons learned from peatland restoration projects.</p>
     <a href="{{ '/peatlands/best-practices/' | relative_url }}" class="btn">Learn more</a>
-  </div>
+  </div> -->
 
 
 </div>
