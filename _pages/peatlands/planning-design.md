@@ -11,6 +11,44 @@ Upon identification of the stressors affecting a peatland and their extent, rest
 ### Stakeholder engagement
 Peatland restoration requires balancing, in addition to ecological objectives, socioeconomic, cultural, and legal considerations. Therefore, effective planning of restoration projects is dependent on engagement with stakeholders who have an investment in the project outcome.<sup><a class="fnref" id="ref-4-origin" href="#fn-4">[4]</a></sup> For a list of common stakeholder groups that should be engaged during restoration projects, along with reasons for engagement, see Table X.
 
+<p class="caption"><strong>Table 3.</strong> Common stakeholder groups in restoration projects and potential reasons for engagement (Gann et al., 2019).</p>
+<div class="site-table-wrap">
+  <table class="site-table" role="table">
+    <thead>
+      <tr>
+        <th scope="col">Stakeholder Category</th>
+        <th scope="col">Stakeholder</th>
+        <th scope="col">Potential Reasons for Engagement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="group-row">
+        <td class="group-label" rowspan="1"><span class="group-badge">Community</span></td>
+        <td>Local community</td>
+        <td>Garnering public support; addressing concerns (e.g., flood risk and land use change) and providing information on the benefits of restoration (e.g., flood mitigation and carbon storage); obtaining local knowledge, fostering community involvement with the project</td>
+      </tr>
+      <tr class="group-row">
+        <td class="group-label" rowspan="3"><span class="group-badge">Operational</span></td>
+        <td>Landowners and land managers</td>
+        <td>Acquiring consent for restoration work</td>
+      </tr>
+      <tr>
+        <td>Scientific and technical experts</td>
+        <td>Determining the best available information to inform restoration</td>
+      </tr>
+      <tr>
+        <td>Investors and funding sources</td>
+        <td>Procuring the financial resources necessary for restoration</td>
+      </tr>
+    <tr class="group-row">
+        <td class="group-label" rowspan="1"><span class="group-badge">Institutional</span></td>
+        <td>Governmental and regulatory bodies</td>
+        <td>Securing permits and ensuring legal compliance</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <div class="callout-green">
   <span class="callout-label">CASE STUDY - Stakeholder engagement to navigate conflict (Estonia, Life Peat Restore)</span>
   <p>During the planning process, conflicts are likely to arise regarding the desired outcomes of restoration and how these outcomes will be achieved. Engagement is critical for navigating these conflicts, as evidenced by a case study presented by Pakalne et al. (2021).<sup><a class="fnref" id="ref-5-origin" href="#fn-5">[5]</a></sup> In the Estonian LIFE Peat Restore project, restoration of degraded peatlands was considered a national priority. At one project site, two ditches were planned to be blocked for rewetting. However, these ditches were identified as critical spawning streams for salmon and trout, and therefore, protected under law. The restorationists were stuck between two conflicting directives: protecting spawning streams and restoring degraded peatlands. Eventually, after nearly two years of engagement and discussion with stakeholders, a compromise was reached in which restoration continued while preserving spawning stream function and integrity. This case highlights that although engagement can be a lengthy and complex process, it is essential for addressing the needs and concerns of stakeholders to achieve effective restoration.</p>

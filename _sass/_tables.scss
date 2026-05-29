@@ -378,6 +378,7 @@
 }
 
 .glossary-table {
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9375rem;
@@ -385,7 +386,11 @@
   color: #1a1a1a;
   background: #fff;
 
-  // ── Header ──────────────────────────────────────────────────────────────
+th:nth-child(1) { width: 20%; }
+th:nth-child(2) { width: 60%; }
+th:nth-child(3) { width: 20%; }
+
+// ── Header ──────────────────────────────────────────────────────────────
   thead tr { background: #1e4d2b; }
 
   thead th {
@@ -442,11 +447,11 @@
   }
 
   .glossary-definition {
-    width: 55%;
+    width: 60%;
   }
 
   .glossary-source {
-    width: 25%;
+    width: 20%;
     font-size: 0.85rem;
     color: #4a4a4a;
     font-style: italic;

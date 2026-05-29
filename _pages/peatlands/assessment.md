@@ -58,4 +58,50 @@ The data collected during the assessment of site conditions can be compiled and 
 
 When evaluating the impact of **stressors**, it is important to consider that peat, hydrology, and vegetation react to degradation at different rates.<sup><a class="fnref" id="ref-8i-origin" href="#fn-8">[8]</a></sup> In a drained peatland, hydrology and vegetation experience immediate impacts, with aquatic plant species being unable to survive in the dry conditions, while peat decomposes slowly with less immediate impacts. Considering the differing responses of peat, hydrology, and vegetation to different stressors during the site assessment provides practitioners with the necessary information to begin the restoration planning process.
 
+<p class="caption"><strong>Table 2.</strong> Stressors, associated land uses, and impacts affecting degraded peatland sites.</p>
+<div class="site-table-wrap">
+  <table class="site-table" role="table">
+    <thead>
+      <tr>
+        <th scope="col">Stressors</th>
+        <th scope="col">Associated land use</th>
+        <th scope="col">Primary impacts on peatland function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Drainage</strong></td>
+        <td>Agriculture, forestry, peat extraction, livestock, infrastructure development</td>
+        <td>
+          <ul>
+            <li>Loss of <em>Sphagnum</em> spp. and biodiversity</li>
+            <li>Peat decomposition and Carbon release</li>
+            <li>Internal eutrophication</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Nutrient enrichment</strong></td>
+        <td>Agriculture, livestock grazing</td>
+        <td>
+          <ul>
+            <li>External eutrophication</li>
+            <li>Establishment of nutrient-favouring non-peatland plant species</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Invasive plant species</strong></td>
+        <td>Agriculture, forestry, peat extraction, infrastructure development</td>
+        <td>
+          <ul>
+            <li>Outcompetition of peatland species and reduced biodiversity</li>
+            <li>Altered water chemistry</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 {% include references.html file="refs/refs_assessment.html" %}
