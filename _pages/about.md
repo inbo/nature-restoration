@@ -39,4 +39,4 @@ This website is one of the key outputs of the ALFAwetlands project. It provides 
 - and long-term management after restoration. 
 
 We focus on peat habitats within wetlands, peatlands on mineral or more organic soils.
-The results help policymakers and practitioners identify effective restoration strategies that reduce emissions, protect biodiversity and ecosystem services, and are socially and economically viable. <!--The project also promotes best practices for peatland restoration across Europe.-->
+The results help policymakers and practitioners identify effective restoration strategies that reduce emissions, protect biodiversity and ecosystem services. <!--The project also promotes best practices for peatland restoration across Europe.-->
