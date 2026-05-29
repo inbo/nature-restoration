@@ -33,10 +33,10 @@ However, important knowledge gaps remain. We still need a better understanding o
 
 To support this, more accurate and harmonised data on European wetlands is needed, including their emissions and the impact of restoration at local, national, and EU levels.
 This website is one of the key outputs of the ALFAwetlands project. It provides practical guidance for:
-- planning and designing wetland restoration projects, 
+- planning and designing peatland restoration projects, 
 - implementing restoration measures, 
 - monitoring and evaluation, 
 - and long-term management after restoration. 
 
 We focus on peat habitats within wetlands, peatlands on mineral or more organic soils.
-The results help policymakers and practitioners identify effective restoration strategies that reduce emissions, protect biodiversity and ecosystem services, and are socially and economically viable. The project also promotes best practices for peatland restoration across Europe.
+The results help policymakers and practitioners identify effective restoration strategies that reduce emissions, protect biodiversity and ecosystem services, and are socially and economically viable. <!--The project also promotes best practices for peatland restoration across Europe.-->
