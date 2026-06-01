@@ -13,7 +13,6 @@
 
 .site-table-wrap {
   margin: 2rem 0 0.5rem;
-  overflow-x: auto;
   border-radius: 10px;
   box-shadow: 0 2px 14px rgba(30, 77, 43, 0.10);
 }
@@ -47,9 +46,7 @@
   tbody tr {
     border-bottom: 1px solid #c8dece;
     transition: background 0.15s ease;
-
-    &:last-child { border-bottom: none; }
-
+    
     // First row of each group gets a light tint
     &.group-row td:not(.group-label) { background: #eef5f0; }
 
@@ -57,6 +54,16 @@
     &:hover td:not(.group-label) { background: #dff0e5; }
   }
 
+  // Flip popup upward for last 4 rows 
+  tbody tr:last-child,
+  tbody tr:nth-last-child(2),
+  tbody tr:nth-last-child(3),
+  tbody tr:nth-last-child(4) {
+  .popup-card {
+    top: auto;
+    bottom: calc(100% + 6px);
+   }
+  }
   // ── Data cells ──────────────────────────────────────────────────────────
   td {
     padding: 0.65rem 1.25rem;
