@@ -1,7 +1,7 @@
 # SITE SETTINGS
 title: Peatland restoration guidelines
 author: EcoRestoration
-baseurl: "/nature-restoration"
+baseurl: ""
 url: "https://EcoRestoration.github.io"
 
 # THEME SETTINGS
