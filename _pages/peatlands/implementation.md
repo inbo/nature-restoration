@@ -11,8 +11,7 @@ Peatland restoration requires practical decisions across hydrology, water qualit
 
 ### Habitat Identification Decision Tree
 Peatlands differ strongly between regions and site conditions. Restoration measures that are appropriate for one habitat type may not work for another. 
-The habitat identification tool helps users narrow down the most likely habitat type based on ecological characteristics and site conditions.
-Once a habitat type is identified, the tool links directly to available guideline sheets where they exist.
+The habitat identification {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} helps users narrow down the most likely habitat type based on ecological characteristics and site conditions.
 
 <div class="card-grid">
   
@@ -53,7 +52,7 @@ Key questions include:
 Not all sites can return to their historical condition. In some cases, the priority may be to stabilise peat, improve hydrology, reduce emissions, or strengthen resilience rather than recreate a former habitat exactly. Because peatlands are dynamic systems, restoration should be adaptive. Monitoring, phased interventions, and regular reassessment are often more effective than fixed restoration targets.
 
 ### Decision tree for restoring degraded fens and bogs
-Degraded peatlands are often affected by multiple interacting pressures, including drainage, altered hydrology, nutrient enrichment, peat oxidation, and fragmentation. The restoration wizard helps practitioners assess these barriers through six connected phases: hydrology, water chemistry, nutrients, management, species recovery, and resilience. Each phase contains practical questions, highlights common restoration mistakes and risks, and points to priority actions where relevant. The tool encourages a staged and adaptive approach, recognising that successful restoration often depends first on restoring hydrological function before addressing vegetation recovery, species return, or long-term management.
+Degraded peatlands are often affected by multiple interacting pressures, including drainage, altered hydrology, nutrient enrichment, peat oxidation, and fragmentation. The restoration {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} helps practitioners assess these barriers through six connected phases: hydrology, water chemistry, nutrients, management, species recovery, and resilience. Each phase contains practical questions, highlights common restoration mistakes and risks, and points to priority actions where relevant. The tool encourages a staged and adaptive approach, recognising that successful restoration often depends first on restoring hydrological function before addressing vegetation recovery, species return, or long-term management.
 
 {% include fen-restoration-wizard.html %}
 
