@@ -80,7 +80,7 @@ European peatland habitats are protected under both the Habitats Directive and t
 
 ### Ecosystem services
 
-Beyond carbon storage and biodiversity, peatlands provide a range of regulating and cultural services: water purification, flood attenuation, baseflow maintenance, and cultural landscape value. Economic analyses suggest that every euro invested in wetland restoration generates €8–38 in economic value through enhanced ecosystem services (IEEP policy brief; reference to be verified). A Cost–Benefit Analysis (CBA) — assigning monetary values to these benefits relative to restoration costs — can be a useful tool for securing private landowner support.
+Beyond carbon storage and biodiversity, peatlands provide a range of regulating and cultural services: water purification, flood attenuation, baseflow maintenance, and cultural landscape value. Economic analyses suggest that every euro invested in wetland restoration generates €8–38 in economic value through enhanced ecosystem services (IEEP policy brief; reference to be verified). A Cost–Benefit Analysis (CBA) — assigning monetary values to these benefits relative to restoration costs — can be a useful tool for securing private landowner support.<sup><a class="fnref" id="ref-26-origin" href="#fn-26">[26]</a></sup>
 
 {% include figure.html src="/assets/images/figure5_ecosystem_services.png" caption="<strong>Figure 5.</strong> Peatland ecosystem services adapted from NATURACOMMUNITIES." %}
 

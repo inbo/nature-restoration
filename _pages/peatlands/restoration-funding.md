@@ -79,8 +79,8 @@ As part of the Nature Restoration Regulation, EU Member States are required to p
 
 Article 4 of the Nature Restoration Regulation mandates that:
 * At least 30% of Annex I habitat area in bad condition must be restored **by 2030**
-* At least 60% by 2040
-* At least 90% by 2050
+* At least 60% of the area of each group of habitat types listed in Annex I that is not in good condition  **by 2040**
+* At least 90% of such area **by 2050**
 Until 2030, the Nature Restoration Regulation highlights that Member States should give priority to restoration measures in areas located in Natura 2000 sites (NRR (EU 2024/1991)).<sup><a class="fnref" id="ref-4c-origin" href="#fn-4">[4]</a></sup>
 
 
