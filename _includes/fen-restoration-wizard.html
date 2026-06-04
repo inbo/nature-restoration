@@ -396,12 +396,12 @@
 
 // ── Phase definitions ────────────────────────────────────────────────────────
 var PHASES = [
-  { id: "hydrology",  label: "Hydrology",      num: "1", img: "/nature-restoration/assets/images/1hydrology.jpg"},
-  { id: "chemistry",  label: "Water chemistry", num: "2", img: "/nature-restoration/assets/images/2water_chemistry.jpg"},
-  { id: "nutrients",  label: "Nutrients",       num: "3", img: "/nature-restoration/assets/images/3nutrients.jpg"},
-  { id: "management",label: "Management",      num: "4", img: "/nature-restoration/assets/images/4management.jpg"},
-  { id: "species",    label: "Species",         num: "5", img: "/nature-restoration/assets/images/5species.jpg" },
-  { id: "resilience",label: "Resilience",      num: "6", img: "/nature-restoration/assets/images/6resilience.jpg" }
+  { id: "hydrology",  label: "Hydrology",      num: "1", img: "{{ '/assets/images/1hydrology.jpg' | relative_url }}" },
+  { id: "chemistry",  label: "Water chemistry", num: "2", img: "{{ '/assets/images/2water_chemistry.jpg' | relative_url }}" },
+  { id: "nutrients",  label: "Nutrients",       num: "3", img: "{{ '/assets/images/3nutrients.jpg' | relative_url }}" },
+  { id: "management", label: "Management",      num: "4", img: "{{ '/assets/images/4management.jpg' | relative_url }}" },
+  { id: "species",    label: "Species",         num: "5", img: "{{ '/assets/images/5species.jpg' | relative_url }}" },
+  { id: "resilience", label: "Resilience",      num: "6", img: "{{ '/assets/images/6resilience.jpg' | relative_url }}" }
 ];
 
 // ── Decision trees ───────────────────────────────────────────────────────────

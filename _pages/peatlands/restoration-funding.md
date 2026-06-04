@@ -68,6 +68,7 @@ Within the Natura 2000 network, two main categories of protected sites are desig
 
 
 **Natura 2000 Funding**
+
 Use this interactive {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} to determine if your site falls under statutory Natura 2000 obligations and to identify the primary financing streams available for your project. By answering the targeted routing questions, you will map out your site's eligibility for targeted core programs.
 {% include funding-wizard-s1.html %}
 
@@ -84,6 +85,7 @@ Until 2030, the Nature Restoration Regulation highlights that Member States shou
 
 
 **NRR Article 4**
+
 This diagnostic {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} evaluates your project's status against the legally binding timeline targets mandated by Article 4 of the Nature Restoration Regulation. It calculates whether your proposed works constitute a mandatory statutory requirement or an eligible voluntary extension, routing you to the corresponding public or private financing frameworks.
 {% include funding-wizard-s2-1.html caption="<strong>Figure 13.</strong> Decision support flowchart for peatland restoration within the European Union."%}
 
@@ -100,6 +102,7 @@ However, Member States are allowed to put in place restoration measures, includi
 
 
 **NRR Article 11 Agricultural & Forestry**
+
 Because Article 11 specifically targets drained peatlands under active agricultural or forestry use, funding eligibility shifts based on Common Agricultural Policy (CAP) integration and land-use history. Navigate the questions below to isolate your exact funding pathway, factoring in national rewetting thresholds and land-use allowances.
 {% include funding-wizard-s2-2.html %}
 
@@ -110,6 +113,7 @@ Even though peatlands are not considered as separate water bodies under the WFD,
 
 
 **Water Framework Directive (WFD)**
+
 This interactive {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} analyzes how your local peatland hydrology interacts with broader river basin objectives. By tracing whether your restoration works are embedded as basic or supplementary measures within a regional framework, the tool identifies whether your funding path relies on mandatory legal compliance funds or voluntary water-quality incentive schemes.
 {% include funding-wizard-s3.html %}
 
@@ -119,6 +123,7 @@ Although EU funds are often prioritized for restoration measures linked to EU en
 
 
 **Voluntary & Ecosystem Services**
+
 If your site sits outside of statutory mandates, financial viability relies on voluntary mechanisms, eco-schemes, and private ecosystem service markets. Use this final {% include tooltip.html term="wizard" definition="User interface element that guides you step by step." %} to evaluate how your independent project can leverage competitive EU supplementary funds, national policy portals, or private carbon farming certification programs to offset income loss and fund capital works.
 {% include funding-wizard-s4.html %}
 
