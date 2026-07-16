@@ -1,19 +1,18 @@
 ---
 layout: base
-title: "Peatland restoration guidelines"
+title: "Nature restoration guidelines"
 hero_image: "/assets/backgrounds/Finland.jpg"
 image_credit: "Yves Adams, Vilda"
-hero_subtitle: "Practical restoration pathways for Europe's mires, bogs and fens"
 permalink: /
 toc: false
 ---
 
-
-Peatlands are among the planet’s most powerful natural allies—quietly storing vast amounts of carbon, supporting rare biodiversity, and regulating water systems. Yet when they are degraded, they shift from protectors to sources of emissions. Restoring peatlands is not just an environmental act; it is an investment in climate stability, resilience, and the health of future generations.
+Thriving ecosystems are our greatest allies in tackling the climate crisis, filtering our water, and securing our food systems. Investing in the recovery of our natural world is not a cost—it is the single most effective investment we can make to secure a healthy and stable planet.
 
 <blockquote>
-"To restore peatlands is to restore balance—between land and water, climate and life.”
+"To restore nature is to restore our own future—healing the living systems that sustain all life.”
 </blockquote>
+
 
 <div class="card-grid">
   <div class="card">
@@ -21,21 +20,19 @@ Peatlands are among the planet’s most powerful natural allies—quietly storin
       <img class="card-image" src="{{ '/assets/images/buitengoor.jpg' | relative_url }}" alt="Buitengoor, Belgium">
       <span class="card-attribution">© Yves Adams, Vilda</span>
     </div>
-    <span class="card-label">Peatlands</span>
     <h3 class="card-title">Peatland Restoration</h3>
     <p class="card-excerpt">Guidelines for peatland restoration.</p>
     <a href="{{ '/peatlands/' | relative_url }}" class="btn">Learn more</a>
   </div>
 
-<!-- <div class="card">
+<div class="card">
     <div class="card-image-wrapper">
-      <img class="card-image" src="{{ '/assets/images/CoastalWetland.jpg' | relative_url }}" alt="Coastal wetland, Spain">
-      <span class="card-attribution">© Silvia Poblador, University of Barcelona</span>
+      <img class="card-image" src="{{ '/assets/backgrounds/OudeSchelde.jpg' | relative_url }}" alt="Oude Schelde, Belgium">
+      <span class="card-attribution">© Yves Adams, Vilda</span>
     </div>
-    <span class="card-label">Landscape perspectives</span>
-    <h3 class="card-title">Wetland Restoration</h3>
-    <p class="card-excerpt">Guidelines for wetland restoration.</p>
-    <a href="{{ '/landscape/' | relative_url }}" class="btn">Learn more</a>
-  </div> -->
+    <h3 class="card-title">River connectivity</h3>
+    <p class="card-excerpt">Guidelines for restoring river connectivity.</p>
+    <a href="{{ '/river-connectivity/' | relative_url }}" class="btn">Learn more</a>
+  </div>
   
 </div>

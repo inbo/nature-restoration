@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Peatlands"
+hero_subtitle: "Practical restoration pathways for Europe's mires, bogs and fens"
 hero_image: /assets/backgrounds/veenmosbedje.jpg
 image_credit: "Yves Adams, Vilda"
 hero_overlay: true   # omit for photo only
@@ -8,10 +9,10 @@ permalink: /peatlands/
 toc: false
 ---
 
-Peatlands may appear quiet and unassuming, yet they hold immense power in shaping our climate and ecosystems. When healthy, they lock away carbon, nurture unique biodiversity, and sustain water cycles. Their restoration is a step toward resilience—reviving landscapes that not only remember the past, but actively safeguard our future.
+Peatlands are among the planet’s most powerful natural allies—quietly storing vast amounts of carbon, supporting rare biodiversity, and regulating water systems. Yet when they are degraded, they shift from protectors to sources of emissions. Restoring peatlands is not just an environmental act; it is an investment in climate stability, resilience, and the health of future generations.
 
 <blockquote>
-"Peatlands remind us that the most powerful climate solutions often lie quietly beneath our feet.”
+"To restore peatlands is to restore balance—between land and water, climate and life.”
 </blockquote>
 
 <div class="card-grid">
