@@ -66,7 +66,7 @@ A key development is the establishment of infrastructure for biomass processing 
 
 Further, effective restoration requires continuous engagement throughout the entire process. Workshops and field excursions during the planning phase support the co-creative process and advance a social-ecological transformation. Communication channels with stakeholders established early on must be well-maintained and prepared for an adaptive approach. This ensures that unforeseen conditions can be quickly addressed, minimizing project delays.
 
-{% include figure.html src="/assets/images/stakeholdermeeting_field.jpg" caption="<strong>Figure 9.</strong> Discussing peatland restoration with local stakeholders in the Upper Peene Valley.  Landscape walk on 29.5.2024. &copy; M. Lorenz, Succow Foundation" %}
+{% include figure.html src="/assets/images/stakeholdermeeting_field.jpg" caption="&copy; M. Lorenz, Succow Foundation" %}
 <!--<div class="callout-green">
   <span class="callout-label">LESSONS LEARNED - Co-creation: Lessons learned from the ALFAwetlands Living Labs</span>
   <p> </p>
