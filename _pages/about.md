@@ -17,7 +17,6 @@ Restoring Europe’s fens, bogs, and floodplains requires a united effort across
 
 <figure>
 <img src="{{ site.baseurl }}/assets/images/ALFAwetlandsTeam.jpg" alt="Figure team">
-  <figcaption>Figure: ALFAwetlands team.</figcaption>
 </figure>
 
 ## 2. Aim of this webtool?
