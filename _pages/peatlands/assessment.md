@@ -6,8 +6,8 @@ image_credit: "Toon de Vos"
 permalink: /peatlands/assessment/
 ---
 
-# 2 Restoration
-## 2.1  Assessment: understanding the site before intervening
+# Restoration
+## Assessment: understanding the site before intervening
 
 A key first step in peatland restoration is a comprehensive assessment of the site conditions.<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a>,<a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a></sup> By monitoring and analyzing the site conditions, restoration practitioners can identify the prominent stressors, quantify their impacts, and develop goals to restore the site. The assessment should describe the current conditions and, if possible, the pre-degraded functioning of the site.<sup><a class="fnref" id="ref-1b-origin" href="#fn-1">[1]</a></sup>
 

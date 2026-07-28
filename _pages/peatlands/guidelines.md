@@ -5,8 +5,8 @@ hero_image: "/assets/backgrounds/De_Teut.jpg"
 image_credit: "Yves Adams, Vilda"
 permalink: /peatlands/guidelines/
 ---
-# 2 Restoration
-## 2.1  Assessment: understanding the site before intervening
+# Restoration
+## Assessment: understanding the site before intervening
 
 A key first step in peatland restoration is a comprehensive assessment of the site conditions.<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a>,<a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a></sup> By monitoring and analyzing the site conditions, restoration practitioners can identify the prominent stressors, quantify their impacts, and develop goals to restore the site. The assessment should describe the current conditions and, if possible, the pre-degraded functioning of the site.<sup><a class="fnref" id="ref-1b-origin" href="#fn-1">[1]</a></sup>
 
@@ -53,7 +53,7 @@ When evaluating the impact of **stressors**, it is important to consider that pe
   <p>The Von Post scale is a 10-step system for classifying peat decomposition, from H1 (completely undecomposed, intact plant structure) to H10 (fully decomposed, no identifiable plant structure). The test involves hand-squeezing a peat sample and observing the colour, turbidity, and texture of extruded water and the remaining material. As peat condition is generally a good indicator of peatland health, due to its interdependence with water and vegetation,<sup><a class="fnref" id="ref-16-origin" href="#fn-16">[16]</a></sup> the level of decomposition serves as a reliable proxy for peatland condition. For a simplified version of the Von-Post scale see Figure X.</p>
 </div>
 
-## 2.2  Planning and design
+## Planning and design
 Upon identification of the stressors affecting a peatland and their extent, restoration planning can begin. This is a critical phase, as it defines the project vision, while identifying potential problems and conflicts that might be encountered along the way.<sup><a class="fnref" id="ref-4b-origin" href="#fn-4">[4]</a>,<a class="fnref" id="ref-19-origin" href="#fn-19">[19]</a>,<a class="fnref" id="ref-1g-origin" href="#fn-1">[1]</a></sup> Developing a restoration plan is a complex process, requiring engagement with stakeholders, definition of clear goals and objectives, prioritization of restoration options, and effective baseline data. Incorporating these components into the planning phase sets the stage for effective peatland restoration.
 
 ### Stakeholder engagement
@@ -98,9 +98,9 @@ The restoration plan should be considered a living document that will change and
 ### Baseline monitoring
 The final step before restoration measures can begin is to conduct baseline monitoring. This provides a point of comparison, both for assessing pre-restoration conditions against the reference model and for comparing pre-restoration and post-restoration conditions. Having these comparisons is necessary for measuring the effectiveness of restoration and communicating project development to stakeholders. As pre-restoration conditions will be compared to post-restoration conditions, baseline monitoring should focus on measurable indicators which will determine if desired restoration outcomes have been achieved.<sup><a class="fnref" id="ref-4f-origin" href="#fn-4">[4]</a>,<a class="fnref" id="ref-1j-origin" href="#fn-1">[1]</a></sup> For guidance on monitoring design and parameter selection, see Section 2.5.
 
-## 2.3 Implementation
+## Implementation
 
-## 2.4  Monitoring and evaluation
+## Monitoring and evaluation
 Monitoring plays a crucial role in the post-implementation phase of restoration projects, as it serves to determine whether restoration targets have been met.<sup><a class="fnref" id="ref-8n-origin" href="#fn-8">[8]</a>,<a class="fnref" id="ref-13b-origin" href="#fn-13">[13]</a></sup> Without a comprehensive monitoring plan, it is not possible to conclude the effectiveness of restoration, as there is no point of comparison between the restored peatland and the desired conditions. By developing a robust monitoring plan, restoration practitioners can determine the efficacy of treatments and adapt or modify approaches to better achieve the desired outcomes.<sup><a class="fnref" id="ref-16b-origin" href="#fn-16">[16]</a>,<a class="fnref" id="ref-8o-origin" href="#fn-8">[8]</a>,<a class="fnref" id="ref-20-origin" href="#fn-20">[20]</a></sup> This could include, for example, adjusting management practices or modifying the project goals and objectives. Monitoring also helps determine whether funds were spent effectively,<sup><a class="fnref" id="ref-8p-origin" href="#fn-8">[8]</a></sup> allowing for improved restoration planning and funding allocation in future projects.
 
 {% include figure.html src="/assets/images/figure_monitoring.png" caption="<strong>Figure .</strong> A systematic framework for peatland restoration monitoring, highlighting the integration of pre- and post-restoration phases within an adaptive management cycle, generated by Gemini (Google) on April 30 2026." %}
@@ -213,7 +213,7 @@ Another widely used technique for evaluating restoration outcomes is the 5-star 
 
 Determining how well targets were met allows practitioners to assess the efficacy of restoration, and whether funding was well spent.<sup><a class="fnref" id="ref-8s-origin" href="#fn-8">[8]</a></sup> Determining which treatments were or were not effective will enable enhanced selection of restoration treatments in future projects, leading to more effective spending. In addition to evaluating the impacts of restoration, the monitoring plan and protocols should also be assessed.<sup><a class="fnref" id="ref-20h-origin" href="#fn-20">[20]</a></sup> Restoration practitioners should consider whether monitoring is providing the information required to evaluate restoration impacts to determine whether technical adjustments to the monitoring program are required to assess restoration outcomes more effectively. The outcomes of the restoration treatment evaluation will determine whether management interventions are needed.
 
-## 2.5  Ongoing Management
+## Ongoing Management
 Restored peatlands, like most restoration sites, will often require some level of ongoing management after treatments to prevent the site from regressing into a degraded state.<sup><a class="fnref" id="ref-4i-origin" href="#fn-4">[4]</a></sup> The level of ongoing management required will depend on various factors, including the characteristics of the restoration site, the present stressors, and the available funding. Ongoing management can include either pre-scheduled preventative maintenance or adaptive management, which is determined based on the monitoring results.
 
 {% include figure.html src="/assets/images/figure_ongoing_management.png" caption="<strong>Figure .</strong> Strategic components of ongoing peatland management. Key elements include preventative maintenance, infrastructure repair, and an adaptive cycle designed to facilitate long-term ecosystem stability and passive restoration, generated by Gemini (Google) on April 30 2026." %}

@@ -6,7 +6,7 @@ image_credit: "Kasias"
 permalink: /peatlands/implementation/
 ---
 
-## 2.3 Implementation
+## Implementation
 Peatland restoration requires practical decisions across hydrology, water quality, vegetation, land management, and long-term governance. The implementation section brings together tools and guidance to support practitioners and policymakers during the restoration process. The tools are designed to help users identify peatland habitat types, assess restoration barriers, explore country-specific guidance, and adapt restoration measures to local ecological conditions. Because peatland systems are dynamic and often affected by multiple interacting pressures, successful restoration depends on adaptive management, collaboration between planning and field teams, and continuous learning throughout implementation.
 
 ### Habitat Identification Decision Tree

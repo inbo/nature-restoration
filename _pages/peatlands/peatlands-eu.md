@@ -6,7 +6,7 @@ image_credit: "Yves Adams, Vilda"
 permalink: /peatlands/peatlands-eu/
 ---
 
-## 1.1 Peatlands, fens, bogs, mires, and wetlands: what's in a name?
+## Peatlands, fens, bogs, mires, and wetlands: what's in a name?
 
 European peatland science uses a precise vocabulary that does not always map neatly onto everyday language. Using terms consistently is essential for project documentation, regulatory compliance, and cross-border collaboration. In this section, we clarify key distinctions between terms such as peatlands, fens, bogs, mires, and wetlands to support a shared understanding.
 
@@ -60,7 +60,7 @@ Mires and peatlands can be classified using a combination of hydrological and ch
 
 ---
 
-## 1.2 Why peatland restoration?
+## Why peatland restoration?
 
 Peatland restoration is the assisted recovery of a degraded, damaged, or destroyed peatland ecosystem. It aims to return peatland structure, species composition and ecological processes to a naturally functioning, self-sustaining state.<sup><a class="fnref" id="ref-8-origin" href="#fn-8">[8]</a>,<a class="fnref" id="ref-7b-origin" href="#fn-7">[7]</a>,<a class="fnref" id="ref-9-origin" href="#fn-9">[9]</a></sup> Peatland restoration is important for three key reasons: stabilizing the climate, conserving biodiversity, and supporting a wide range of ecosystem services. To prevent further peat decomposition, soil subsidence and CO2 emissions from peatlands, peatland restoration always requires full rewetting by raising the water level to near the surface.<sup><a class="fnref" id="ref-10-origin" href="#fn-10">[10]</a></sup> 
 
@@ -95,7 +95,7 @@ Beyond carbon storage and biodiversity, peatlands provide a range of regulating 
   </ul>
 </div>
 
-## 1.3 Political Landscape of Peatland Protection
+## Political Landscape of Peatland Protection
 
 Peatlands are central to achieving the targets of several EU sectoral policies. Notable EU legislations include the Common Agricultural Policy (CAP); EU Land use, land use change and forestry (LULUCF) regulation under the Fit for 55 Climate Package; Water Framework Directive (WFD); Habitats and Birds Directives; Nature Restoration Regulation (NRR); and a potential upcoming Carbon Removals and Carbon Farming Certification (CRCF).<sup><a class="fnref" id="ref-16-origin" href="#fn-16">[16]</a></sup>
 

@@ -5,7 +5,7 @@ hero_image: "/assets/backgrounds/planning.jpg"
 permalink: /peatlands/planning-design/
 ---
 
-## 2.2  Planning and design
+## Planning and design
 Upon identification of the stressors affecting a peatland and their extent, restoration planning can begin. This is a critical phase, as it defines the project vision, while identifying potential problems and conflicts that might be encountered along the way.<sup><a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-7-origin" href="#fn-7">[7]</a>,<a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a></sup> Developing a restoration plan is a complex process, requiring engagement with stakeholders, definition of clear goals and objectives, prioritization of restoration options, and effective baseline data. Incorporating these components into the planning phase sets the stage for effective peatland restoration.
 
 ### Stakeholder engagement
