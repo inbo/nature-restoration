@@ -59,7 +59,7 @@ The following Decision Support System (DSS) is meant for all landowners and prac
     T3["<a href='#324-section-3-water-framework-directive' style='color:inherit;text-decoration:none;'>Section 3<br>Water Framework Directive</a>"]:::target
     T4["<a href='#325-section-4-other-scenarios' style='color:inherit;text-decoration:none;'>Section 4<br>Other scenarios</a>"]:::target
 ```
-<p class="caption"><strong>Figure 1.</strong>  Decision support flowchart for peatland restoration within the European Union.</p>
+<!--<p class="caption"><strong>Figure 1.</strong>  Decision support flowchart for peatland restoration within the European Union.</p>-->
 
 ### Section 1: Natura 2000 network
 The Birds Directive (Directive 2009/147/EC on the conservation of wild birds (referred to as Birds Directive 2009/147/EC); adopted 1979)<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a></sup> and the Habitats Directive (Council Directive 92/43/EEC on the conservation of natural habitats and of wild fauna and flora (referred to as Habitat Directive (92/43/EEC); adopted 1992)<sup><a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a></sup> are the oldest EU nature conservation policies, designed to protect wild birds, habitats, and species across Europe. Together, they form the Natura 2000 network, which aims to prevent habitat degradation and ensure the maintenance or restoration of favourable conservation status (FCS) for species and habitats of community interest, within which peatlands and other wetlands figure prominently (Habitat Directive (92/43/EEC), Peters & von Unger (2017)).<sup><a class="fnref" id="ref-2b-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-3-origin" href="#fn-3">[3]</a></sup>

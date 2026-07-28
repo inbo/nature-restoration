@@ -11,7 +11,7 @@ Upon identification of the stressors affecting a peatland and their extent, rest
 ### Stakeholder engagement
 Peatland restoration requires balancing, in addition to ecological objectives, socioeconomic, cultural, and legal considerations. Therefore, effective planning of restoration projects is dependent on engagement with stakeholders who have an investment in the project outcome.<sup><a class="fnref" id="ref-4-origin" href="#fn-4">[4]</a></sup> For a list of common stakeholder groups that should be engaged during restoration projects, along with reasons for engagement, see Table X.
 
-<p class="caption"><strong>Table 3.</strong> Common stakeholder groups in restoration projects and potential reasons for engagement (Gann et al., 2019).</p>
+<!--<p class="caption"><strong>Table 3.</strong> Common stakeholder groups in restoration projects and potential reasons for engagement (Gann et al., 2019).</p>-->
 <div class="site-table-wrap">
   <table class="site-table" role="table">
     <thead>
