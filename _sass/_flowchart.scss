@@ -7,6 +7,16 @@
 .mermaid {
   font-family: $ff-sans;
 
+  // ── Prevent oversized diagrams from scaling text down to illegible sizes ──────
+  // If the diagram's natural width exceeds its container, let it scroll
+  // horizontally instead of shrinking further (which shrinks text with it).
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  svg {
+    min-width: 640px;
+  }
+
   // ── Shape fills ─────────────────────────────────────────────────────────────
   .greenfill > rect,
   .greenfill > polygon { fill: $reed !important; stroke: $sedge !important; }
@@ -63,13 +73,11 @@
   padding: 2px 2px !important;
 }
 //if boxes are too wide → lower wrappingWidth. If text overflows → increase wrappingWidth or lower font-size. If diamonds are too big → lower fontSize in themeVariables.
+
 // ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 600px) {
-  .mermaid {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-
-    svg { min-width: 480px; }
+  .mermaid svg {
+    min-width: 480px;
   }
 }
 

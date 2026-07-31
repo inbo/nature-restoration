@@ -97,6 +97,9 @@
 </html>
 
 <!-- Mermaid support: convert fenced code blocks (```mermaid) and initialize -->
+<!-- Colors, fonts (beyond measurement), borders etc. live in _sass/_flowchart.scss.
+     Only layout-affecting settings (spacing, wrapping) and the two settings
+     Mermaid needs for text measurement (fontFamily, fontSize) live here. -->
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
 
@@ -118,18 +121,61 @@
       }
     }
 
+    // Rounds the corners of target-node rectangles after rendering.
+    // Runs once per render pass; safe to call multiple times.
+    function roundTargetCorners() {
+      document.querySelectorAll('.mermaid .target rect').forEach(function (rect) {
+        rect.setAttribute('rx', '8');
+        rect.setAttribute('ry', '8');
+      });
+    }
+
     function initMermaidNow() {
       try {
         if (!window.mermaid) return false;
         convertMermaidCodeFences();
+
         if (typeof mermaid.initialize === "function") {
-          mermaid.initialize({ startOnLoad: true });
+          mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+              // Only text-measurement settings — Mermaid needs these to size
+              // and wrap nodes correctly since htmlLabels is false. All
+              // colors are handled entirely by _sass/_flowchart.scss.
+              fontFamily: 'Source Sans 3, sans-serif',
+              fontSize: '18px'
+            },
+            flowchart: {
+              htmlLabels: false,
+              curve: 'basis',
+              nodeSpacing: 60,
+              rankSpacing: 35,
+              diagramPadding: 20,
+              useMaxWidth: true,
+              wrappingWidth: 320
+            }
+          });
         }
+
+        var renderResult;
         if (typeof mermaid.run === "function") {
-          mermaid.run({ querySelector: ".mermaid" });
+          renderResult = mermaid.run({ querySelector: ".mermaid" });
         } else if (typeof mermaid.init === "function") {
           mermaid.init(undefined, document.querySelectorAll(".mermaid"));
         }
+
+        // Apply rounded corners once rendering settles. mermaid.run()
+        // returns a promise in v10+; fall back to a short timeout
+        // if it doesn't (or if mermaid.init() was used instead).
+        if (renderResult && typeof renderResult.then === "function") {
+          renderResult.then(roundTargetCorners).catch(function () {
+            setTimeout(roundTargetCorners, 500);
+          });
+        } else {
+          setTimeout(roundTargetCorners, 500);
+        }
+
         return true;
       } catch (e) {
         console.error("Mermaid initialization error:", e);
