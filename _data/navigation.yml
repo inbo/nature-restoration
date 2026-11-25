@@ -24,5 +24,7 @@ main:
         url: /river-connectivity/rivers/
       - title: Floodplains
         url: /river-connectivity/floodplains/
+  - title: Cost-effectiveness
+    url: /cost-effectiveness/
   - title: Key terms
     url: /keyterms/

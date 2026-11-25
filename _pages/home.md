@@ -34,5 +34,15 @@ Thriving ecosystems are our greatest allies in tackling the climate crisis, filt
     <p class="card-excerpt">Guidelines for restoring river connectivity.</p>
     <a href="{{ '/river-connectivity/' | relative_url }}" class="btn">Learn more</a>
   </div>
+
+<div class="card">
+    <div class="card-image-wrapper">
+      <img class="card-image" src="{{ '/assets/backgrounds/Tielrode.jpg' | relative_url }}" alt="Oude Schelde, Belgium">
+      <span class="card-attribution">© Yves Adams, Vilda</span>
+    </div>
+    <h3 class="card-title">Cost-effectiveness</h3>
+    <p class="card-excerpt">Cost-effectiveness in nature restoration.</p>
+    <a href="{{ '/cost-effectiveness/' | relative_url }}" class="btn">Learn more</a>
+  </div>
   
 </div>
