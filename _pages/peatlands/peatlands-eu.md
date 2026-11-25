@@ -8,7 +8,7 @@ permalink: /peatlands/peatlands-eu/
 
 ## Peatlands, fens, bogs, mires, and wetlands: what's in a name?
 
-European peatland science uses a precise vocabulary that does not always map neatly onto everyday language. Using terms consistently is essential for project documentation, regulatory compliance, and cross-border collaboration. In this section, we clarify key distinctions between terms such as peatlands, fens, bogs, mires, and wetlands to support a shared understanding.
+EU peatland science uses a precise vocabulary that does not always map neatly onto everyday language. Using terms consistently is essential for project documentation, regulatory compliance, and cross-border collaboration. In this section, we clarify key distinctions between terms such as peatlands, fens, bogs, mires, and wetlands to support a shared understanding.
 
 ### Wetlands
 
@@ -74,9 +74,9 @@ When peatlands are degraded they can shift from storing carbon to emitting it, r
 
 ### Biodiversity conservation
 
-Peatlands support distinctive and often highly specialised communities of plants, invertebrates, birds, and other organisms. The majority of European peatland habitat types are classified as "vulnerable" or "endangered" on the EUNIS habitat red list. <sup><a class="fnref" id="ref-14-origin" href="#fn-14">[14]</a></sup> Palsas — a unique periglacial landform found in the discontinuous and sporadic permafrost zones of northern Europe — are listed as critically endangered. Restoring peatland hydrology and vegetation directly supports the recovery of these communities and their associated species.
+Peatlands support distinctive and often highly specialised communities of plants, invertebrates, birds, and other organisms. The majority of EU peatland habitat types are classified as "vulnerable" or "endangered" on the EUNIS habitat red list. <sup><a class="fnref" id="ref-14-origin" href="#fn-14">[14]</a></sup> Palsas — a unique periglacial landform found in the discontinuous and sporadic permafrost zones of northern Europe — are listed as critically endangered. Restoring peatland hydrology and vegetation directly supports the recovery of these communities and their associated species.
 
-European peatland habitats are protected under both the Habitats Directive and the Birds Directive, and are subject to binding restoration targets under the Nature Restoration Regulation (NRR). Restoration is therefore not only ecologically justified — in many contexts it is a legal obligation.
+EU peatland habitats are protected under both the Habitats Directive and the Birds Directive, and are subject to binding restoration targets under the Nature Restoration Regulation (NRR). Restoration is therefore not only ecologically justified — in many contexts it is a legal obligation.
 
 ### Ecosystem services
 
@@ -117,7 +117,7 @@ The mire-related open landscapes are divided into three sub-groups under the Hab
 
 Seven of these habitat types are Priority Habitats under Annex I of the Habitats Directive (indicated with an asterisk). For all these habitat types, a clear definition is provided, but member states can have different interpretations that even differ regionally.<sup><a class="fnref" id="ref-17-origin" href="#fn-17">[17]</a></sup> Habitat type 7140 for instance, has 3 subdivisions in Belgium, related to acidity, nutrient status and mineral composition (7140_oli, 7140_meso, 7140_base). In Germany, federal states use different indicator species for 7140, varying from 7 to 141 plant species.<sup><a class="fnref" id="ref-18-origin" href="#fn-18">[18]</a></sup>
 
-The majority of peatlands in Europe are fens.<sup><a class="fnref" id="ref-19-origin" href="#fn-19">[19]</a></sup> Individual mire habitats often occur in complexes with other mire habitat types, making strict separation difficult. Temperature, precipitation and oceanity influence the distribution and variability of peatland types in Europe.<sup><a class="fnref" id="ref-20-origin" href="#fn-20">[20]</a></sup>
+The majority of peatlands in the European Union are fens.<sup><a class="fnref" id="ref-19-origin" href="#fn-19">[19]</a></sup> Individual mire habitats often occur in complexes with other mire habitat types, making strict separation difficult. Temperature, precipitation and oceanity influence the distribution and variability of peatland types in the European Union.<sup><a class="fnref" id="ref-20-origin" href="#fn-20">[20]</a></sup>
 
 Member States are legally obliged to actively manage and protect Natura 2000 sites, focusing on the preservation and restoration of habitat structure and function. This involves maintaining or achieving a favourable conservation status for each designated habitat, which encompasses not only the essential physical components (structure) and ecological processes (functions), but also a diverse and healthy species composition. Several of these habitats and species occur — partly or exclusively — on peat soils (see Annex 1a and 1b).
 

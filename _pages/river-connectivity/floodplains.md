@@ -8,7 +8,7 @@ permalink: river-connectivity/floodplains/
 
 #  Restoring natural floodplains
 ## What is a floodplain?
-A floodplain is the low-lying land adjacent to a river that is shaped by the continuous interaction between river flow, sediment transport, topography, soils and living organisms. Rather than being static landscapes, floodplains are dynamic systems that evolve through natural flooding and sediment deposition over time.<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a></sup> They form the transition zone between aquatic and terrestrial ecosystems and are among the most productive and biologically diverse landscapes in Europe.<sup><a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-3-origin" href="#fn-3">[3]</a></sup>
+A floodplain is the low-lying land adjacent to a river that is shaped by the continuous interaction between river flow, sediment transport, topography, soils and living organisms. Rather than being static landscapes, floodplains are dynamic systems that evolve through natural flooding and sediment deposition over time.<sup><a class="fnref" id="ref-1-origin" href="#fn-1">[1]</a></sup> They form the transition zone between aquatic and terrestrial ecosystems and are among the most productive and biologically diverse landscapes in the European Union region.<sup><a class="fnref" id="ref-2-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-3-origin" href="#fn-3">[3]</a></sup>
 
 A defining characteristic of a healthy floodplain is its lateral connectivity with the river. In a naturally functioning system, water, sediment, nutrients and organisms can move freely between the river channel and the surrounding floodplain, supporting the ecological and hydrological processes that sustain both ecosystems.<sup><a class="fnref" id="ref-4-origin" href="#fn-4">[4]</a>,<a class="fnref" id="ref-1b-origin" href="#fn-1">[1]</a></sup>
 
@@ -20,7 +20,7 @@ Floodplains also improve water quality by trapping sediments, retaining nutrient
 Because floodplains combine flood regulation, water purification and biodiversity conservation within the same landscape, they play a key role in building resilient river basins and adapting to climate change.<sup><a class="fnref" id="ref-2b-origin" href="#fn-2">[2]</a>,<a class="fnref" id="ref-4d-origin" href="#fn-4">[4]</a></sup>
 
 ##  How floodplains have been disconnected
-Over the past century, many European rivers have been heavily modified to support flood protection, navigation, agriculture and urban development. Levees and dikes, river channelisation and straightening, dams and other flow regulation structures, together with urban expansion and land-use change, have progressively disconnected rivers from their floodplains.<sup><a class="fnref" id="ref-1f-origin" href="#fn-1">[1]</a></sup>
+Over the past century, many EU rivers have been heavily modified to support flood protection, navigation, agriculture and urban development. Levees and dikes, river channelisation and straightening, dams and other flow regulation structures, together with urban expansion and land-use change, have progressively disconnected rivers from their floodplains.<sup><a class="fnref" id="ref-1f-origin" href="#fn-1">[1]</a></sup>
 As a result, water, sediment and nutrients can no longer move naturally between the river and its floodplain. This loss of connectivity reduces the floodplain's capacity to store floodwater, degrades riparian habitats and weakens many of the ecosystem functions on which people and nature depend.<sup><a class="fnref" id="ref-3b-origin" href="#fn-3">[3]</a>,<a class="fnref" id="ref-1g-origin" href="#fn-1">[1]</a></sup>
 To support land-use planning and reduce flood risks, floodplains are often classified into different hydraulic zones. These classifications help authorities assess flood hazards, guide spatial planning and identify areas where development should be restricted.<sup><a class="fnref" id="ref-6-origin" href="#fn-6">[6]</a></sup>
 
@@ -37,7 +37,7 @@ The restoration of floodplain functions complements the ambition to restore free
 
 The Habitats Directive (92/43/EEC) has played an important role in protecting valuable floodplain habitats, such as alluvial forests and floodplain meadows, mainly within the Natura 2000 network. However, its focus is primarily on designated habitats and species. The Nature Restoration Regulation expands this ambition by requiring restoration efforts beyond protected areas, creating opportunities to restore ecological processes and habitat networks at the landscape scale.
 
-Floodplain restoration is also closely linked to European climate objectives. Under the Land Use, Land Use Change and Forestry (LULUCF) Regulation (EU) 2018/841, amended by EU 2023/839, Member States have commitments to maintain and increase carbon removals from land use. Healthy floodplains, wetlands and floodplain forests can contribute to these goals by storing carbon and maintaining important ecosystem functions. The EU Adaptation Strategy (2021) further highlights the role of natural water retention measures and ecosystem restoration in reducing climate risks, including flood and drought impacts.
+Floodplain restoration is also closely linked to EU climate objectives. Under the Land Use, Land Use Change and Forestry (LULUCF) Regulation (EU) 2018/841, amended by EU 2023/839, Member States have commitments to maintain and increase carbon removals from land use. Healthy floodplains, wetlands and floodplain forests can contribute to these goals by storing carbon and maintaining important ecosystem functions. The EU Adaptation Strategy (2021) further highlights the role of natural water retention measures and ecosystem restoration in reducing climate risks, including flood and drought impacts.
 
 For policymakers and practitioners, this creates a strong basis for integrating floodplain restoration with biodiversity conservation, flood risk management and climate adaptation. Measures that restore natural floodplain processes can contribute simultaneously to biodiversity objectives under the Nature Restoration Regulation and Habitats Directive, flood risk reduction under the Floods Directive (2007/60/EC), ecological objectives under the Water Framework Directive, and climate mitigation and adaptation targets under EU climate policy. This integrated approach supports restoration strategies that deliver benefits for ecosystems, climate resilience and society.
 
@@ -288,7 +288,7 @@ Successful floodplain restoration focuses on restoring natural hydrological, geo
 
 ### Key guidance documents
 
-Several European guidance documents support the planning and implementation of floodplain restoration projects:
+Several EU guidance documents support the planning and implementation of floodplain restoration projects:
 
 - [European Environment Agency (2020) – Floodplains: A Natural System to Preserve and Restore](https://www.eea.europa.eu/publications/floodplains-a-natural-system-to-preserve-and-restore)
 - [Ecoflood Guidelines (Blackwell et al. 2006)](https://www.ecrr.org/Portals/27/Ecoflood%20Guidelines%20(2006).pdf)
